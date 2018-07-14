@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EnergeController : MonoBehaviour {
+    public GameObject kun;
     public int energe = 100;
     public int minEnerge = 35;
     public float accelerateWaitTime = 2;
+    enum MoveState { left = -1, right = 1 };
+    int moveState = 1;
+    int lastMoveState = 1;
     int maxEnerge;
     int lastEnerge;
     float accelerateTimer = 0;
@@ -24,18 +28,30 @@ public class EnergeController : MonoBehaviour {
             accelerateTimer -= Time.deltaTime;
         }
 
+
+        // 透明度
         if(lastEnerge != energe)
         {
             lastEnerge = energe;
             Color color = GetComponent<SpriteRenderer>().color;
-            //GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
-            //GetComponentInChildren<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
 
             SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
             foreach(SpriteRenderer sprite in sprites)
             {
                 sprite.color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
             }
+        }
+
+        // 方向
+        if(kun.transform.position.x - this.transform.position.x != 0)
+        {
+            moveState = kun.transform.position.x - this.transform.position.x > 0 ? (int)MoveState.right : (int)MoveState.left;
+        }
+
+        if(moveState != lastMoveState)
+        {
+            GetComponent<Animator>().SetInteger("movestate", moveState);
+            lastMoveState = moveState;
         }
 	}
 
