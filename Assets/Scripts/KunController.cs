@@ -52,6 +52,11 @@ public class KunController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if(energe <= 0)
+        {
+            return;
+        }
+
         startTimer += Time.deltaTime;
         absorbTimer += Time.deltaTime;
         consumeTimer += Time.deltaTime;
@@ -68,6 +73,11 @@ public class KunController : MonoBehaviour {
             if(energe > 0)
             {
                 energe -= consumeSpeed;
+
+                if(energe <= 0)
+                {
+                    GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                }
             }
         }
 

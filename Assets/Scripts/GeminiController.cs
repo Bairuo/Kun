@@ -246,8 +246,11 @@ public class GeminiController : MonoBehaviour {
             }
 
             // 吸收能量
-            kun.GetComponent<KunController>().Absorb(energe);
-            particleTrans();
+            if(kun.GetComponent<KunController>().energe > 0)
+            {
+                kun.GetComponent<KunController>().Absorb(energe);
+                particleTrans();
+            }
         }
 
         
