@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KunController : MonoBehaviour {
     public Rocker rocker;
+    public GameObject deathcurtain;
     public float operability;   // 玩家摇杆对鲲的控制力度
     public int energe = 100;
     public int weekEnerge = 40;         // 虚弱能量线
@@ -50,6 +51,11 @@ public class KunController : MonoBehaviour {
         }
     }
 
+    public void GameOver()
+    {
+        deathcurtain.SetActive(true);
+    }
+
 	// Update is called once per frame
 	void Update () {
         if(energe <= 0)
@@ -77,6 +83,7 @@ public class KunController : MonoBehaviour {
                 if(energe <= 0)
                 {
                     GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                    GameOver();
                 }
             }
         }

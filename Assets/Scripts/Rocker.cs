@@ -21,7 +21,7 @@ public class Rocker : MonoBehaviour {
     public void DisPlay()
     {
         display = true;
-        GetComponent<RectTransform>().position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        GetComponent<RectTransform>().position = new Vector3(GetRockerTouchPosition().x, GetRockerTouchPosition().y, 0);
         Color viewportColor = viewport.GetComponent<Image>().color;
         Color joyColor = joy.GetComponent<Image>().color;
         viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 1);
@@ -37,10 +37,30 @@ public class Rocker : MonoBehaviour {
         viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 20.0f / 255);
         joy.GetComponent<Image>().color = new Color(joyColor.r, joyColor.g, joyColor.b, 20.0f / 255);
     }
+
+    public Vector3 GetRockerTouchPosition()
+    {
+        if (Input.touchCount == 0)
+        {
+            return Input.mousePosition;
+        }
+        else
+        {
+            foreach (var touch in Input.touches)
+            {
+                if (touch.position.x < 1.0f * Screen.width * 0.6f)
+                {
+                    return touch.position;
+                }
+            }
+        }
+        //Debug.Log("get touch fail");
+        return Input.mousePosition;
+    }
     
     public void OnMove(RectTransform rect)
     {
-        Vector2 anchoredPosition = Input.mousePosition - viewport.GetComponent<RectTransform>().position;       //scroll rect手指滑动不敏感
+        Vector2 anchoredPosition = GetRockerTouchPosition() - viewport.GetComponent<RectTransform>().position;       //scroll rect手指滑动不敏感
         if(display)
         {
             rect.anchoredPosition = anchoredPosition;

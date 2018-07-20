@@ -7,6 +7,7 @@ public class GameScene : MonoBehaviour {
 
 	public void Return()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("开始游戏");
     }
 
@@ -24,6 +25,7 @@ public class GameScene : MonoBehaviour {
 
     public void ReStart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

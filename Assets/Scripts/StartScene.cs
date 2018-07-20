@@ -10,16 +10,4 @@ public class StartScene : MonoBehaviour {
     {
         SceneManager.LoadScene("冥界忘川河");
     }
-
-    public void PopSetting()
-    {
-        if(!setting.activeSelf)
-        {
-            setting.SetActive(true);
-        }
-        else
-        {
-            setting.SetActive(false);
-        }
-    }
 }
