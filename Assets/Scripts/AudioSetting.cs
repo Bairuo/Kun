@@ -4,10 +4,36 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class AudioSetting : MonoBehaviour {
-    public AudioSource audio;
+    static float audioVolume = 0.618f;
+    static float audioEffectVolume = 0.618f;
 
-	public void ChangeVolume()
+    public Slider AudioSlider;    // 音乐
+    public Slider AudioEffectSlider;      // 音效   
+
+    public AudioSource audio;
+    public AudioSource[] audioEffects;
+
+    void Start()
     {
-        audio.volume = GetComponent<Slider>().value; 
+        AudioSlider.value = audioVolume;
+        AudioEffectSlider.value = audioEffectVolume;
+
+        ChangeAudio();
+        ChangeAudioEffects();
+    }
+
+	public void ChangeAudio()
+    {
+        audio.volume = AudioSlider.value;
+        audioVolume = AudioSlider.value;
+    }
+
+    public void ChangeAudioEffects()
+    {
+        foreach(var audio in audioEffects)
+        {
+            audio.volume = AudioEffectSlider.value;
+        }
+        audioEffectVolume = AudioEffectSlider.value;
     }
 }
