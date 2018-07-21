@@ -67,6 +67,7 @@ public class KunController : MonoBehaviour {
         absorbTimer += Time.deltaTime;
         consumeTimer += Time.deltaTime;
 
+
         if(absorbTimer > absorbTime)
         {
             absorbWait = true;
