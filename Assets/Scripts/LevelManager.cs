@@ -28,6 +28,12 @@ public class LevelManager : MonoBehaviour {
         Enter(maxlevel);
     }
 
+    public void NewGame()
+    {
+        PlayerPrefs.SetInt("maxlevel", 0);
+        Enter(0);
+    }
+
     public void Enter(int index)
     {
         SceneManager.LoadScene(LevelNames[index]);
