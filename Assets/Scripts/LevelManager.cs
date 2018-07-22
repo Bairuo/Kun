@@ -23,6 +23,19 @@ public class LevelManager : MonoBehaviour {
         maxlevel = PlayerPrefs.GetInt("maxlevel", 0);
     }
 
+    public void FirstGame()
+    {
+        if(!PlayerPrefs.HasKey("FirstGame"))
+        {
+            PlayerPrefs.SetInt("FirstGame", 1);
+            SceneManager.LoadScene("剧情CG");
+        }
+        else
+        {
+            Enter(0);
+        }
+    }
+
     public void EnterMax()
     {
         Enter(maxlevel);
