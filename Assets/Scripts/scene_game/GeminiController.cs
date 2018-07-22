@@ -22,6 +22,7 @@ public class GeminiController : MonoBehaviour {
     float accelerate = 1;       // 突破速度上限加速
     float k = 1;
     float breakTimer = 0;
+    bool gameover = false;
     
     void Awake()
     {
@@ -159,6 +160,17 @@ public class GeminiController : MonoBehaviour {
     
 
 	void Update () {
+        if(kun.GetComponent<KunController>().energe <= 0)
+        {
+            if(!gameover)
+            {
+                energe.GetComponentInChildren<ParticleSystem>().Clear();
+                energe.GetComponentInChildren<ParticleSystem>().Stop();
+                gameover = true;
+            }
+            return;
+        }
+
         distance = (kun.transform.position - energe.transform.position).magnitude;
         k = 1;
 
