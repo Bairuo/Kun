@@ -164,6 +164,8 @@ public class GeminiController : MonoBehaviour {
         {
             if(!gameover)
             {
+                energe.GetComponent<Animator>().enabled = false;
+                energe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 energe.GetComponentInChildren<ParticleSystem>().Clear();
                 energe.GetComponentInChildren<ParticleSystem>().Stop();
                 gameover = true;
