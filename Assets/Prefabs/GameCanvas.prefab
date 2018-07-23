@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 222481711053421334}
   - component: {fileID: 114949119385563186}
   - component: {fileID: 95995752237582244}
-  - component: {fileID: 114498742844267204}
+  - component: {fileID: 114415649826363098}
   m_Layer: 5
   m_Name: TransferCurtain-Darkening
   m_TagString: Untagged
@@ -920,7 +920,7 @@ Animator:
   m_GameObject: {fileID: 1740594052447014}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3dd229d9e812319479c3c32e712e60d8, type: 2}
+  m_Controller: {fileID: 9100000, guid: fa48b4eb4400b2b48be6f7bebd7db26f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1822,6 +1822,29 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114415649826363098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997115250570320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a830d514f8bb642b3c18dafc1d918e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelNames:
+  - level1
+  - level2
+  - level3
+  - level4
+  - level5
+  - CG_56
+  - level6
+  - "CG_\u7834\u6C34"
+  - "CG_\u5316\u9E4F"
+  develop: 0
+  nowLevel: 0
 --- !u!114 &114434550597158130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1909,25 +1932,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114498742844267204
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1997115250570320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6a830d514f8bb642b3c18dafc1d918e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelNames:
-  - level1
-  - level2
-  - level3
-  - level4
-  - level5
-  develop: 0
-  nowLevel: 0
 --- !u!114 &114523346725711618
 MonoBehaviour:
   m_ObjectHideFlags: 1

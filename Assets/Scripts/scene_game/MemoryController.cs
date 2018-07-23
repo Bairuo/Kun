@@ -47,11 +47,22 @@ public class MemoryController : MonoBehaviour {
 
     public int Exploit()
     {
-        if(prepare && energe >= speed)
+        if(prepare)
         {
             prepare = false;
-            energe -= speed;
-            return speed;
+
+            if(energe >= speed)
+            {
+                energe -= speed;
+                return speed;
+            }
+            else
+            {
+                int real = energe;
+                energe = 0;
+                return real;
+            }
+
         }
         else
         {

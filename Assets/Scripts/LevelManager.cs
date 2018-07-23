@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-    public string[] LevelNames = {"level1", "level2", "level3", "level4", "level5"};
+    public string[] LevelNames = {"level1", "level2", "level3", "level4", "level5", "CG_56", "level6", "CG_破水", "CG_化鹏"};
     public static int maxlevel = 0;
     public bool develop = false;
  
@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour {
         if(!PlayerPrefs.HasKey("FirstGame"))
         {
             PlayerPrefs.SetInt("FirstGame", 1);
-            SceneManager.LoadScene("剧情CG");
+            SceneManager.LoadScene("CG_开始");
         }
         else
         {

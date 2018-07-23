@@ -866,6 +866,10 @@ MonoBehaviour:
   - level3
   - level4
   - level5
+  - CG_56
+  - level6
+  - "CG_\u7834\u6C34"
+  - "CG_\u5316\u9E4F"
   develop: 0
 --- !u!114 &862673607
 MonoBehaviour:
@@ -1183,6 +1187,10 @@ MonoBehaviour:
   - level3
   - level4
   - level5
+  - CG_56
+  - level6
+  - "CG_\u7834\u6C34"
+  - "CG_\u5316\u9E4F"
   develop: 0
 --- !u!114 &1210769097
 MonoBehaviour:
@@ -1901,6 +1909,10 @@ MonoBehaviour:
   - level3
   - level4
   - level5
+  - CG_56
+  - level6
+  - "CG_\u7834\u6C34"
+  - "CG_\u5316\u9E4F"
   develop: 0
 --- !u!222 &1966193430
 CanvasRenderer:
