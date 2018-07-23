@@ -158,8 +158,8 @@ public class GeminiController : MonoBehaviour {
     }
 
     
-
-	void Update () {
+    void FixedUpdate()
+    {
         if(kun.GetComponent<KunController>().energe <= 0)
         {
             if(!gameover)

@@ -22,7 +22,8 @@ public class EnergeController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    void FixedUpdate()
+    {
         if(accelerateTimer > 0)
         {
             accelerateTimer -= Time.deltaTime;

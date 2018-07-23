@@ -57,7 +57,8 @@ public class KunController : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+    void FixedUpdate()
+    {
         if(energe <= 0)
         {
             return;
