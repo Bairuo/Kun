@@ -24,7 +24,37 @@ public class DeathEffect : MonoBehaviour {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BlackWhiteEffect>().shader = postEffect;
     }
 
-	// Update is called once per frame
+	
+    public void ImmediateExecute()
+    {
+        while(i <= text.Length)
+        {
+            Excute(i);
+            i++;
+        }
+    }
+
+    void Excute(int i)
+    {
+        if (i < text.Length)
+        {
+            textOutput.text += text[i];
+            if (i + 1 == text.Length / 2)
+            {
+                textOutput.text += System.Environment.NewLine;
+            }
+        }
+        else
+        {
+            foreach (var item in displayButtons)
+            {
+                item.SetActive(true);
+            }
+
+            this.enabled = false;
+        }
+    }
+
 	void Update () {
         timer += Time.deltaTime;
 
@@ -32,25 +62,8 @@ public class DeathEffect : MonoBehaviour {
         {
             timer = 0;
 
-            if(i < text.Length)
-            {
-                textOutput.text += text[i];
-                if(i + 1 == text.Length / 2)
-                {
-                    textOutput.text += System.Environment.NewLine;
-                }
-                i++;
-            }
-            else
-            {
-                foreach(var item in displayButtons)
-                {
-                    item.SetActive(true);
-                }
-
-                this.enabled = false;
-            }
-
+            Excute(i);
+            i++;
         }
 	}
 }
