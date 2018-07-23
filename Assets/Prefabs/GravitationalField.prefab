@@ -34,7 +34,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1778497205886158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -55,7 +55,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 0.8
 --- !u!114 &114182892602347498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,5 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c4a7504ba24d2429d43ef314b46e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4
-  gravitation: 0.025
+  target: Energe
+  radius: 0
+  gravitation: 0.1
