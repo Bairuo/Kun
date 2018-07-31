@@ -5,6 +5,8 @@ using UnityEngine;
 public class KunController : MonoBehaviour {
     public Rocker rocker;
     public GameObject deathcurtain;
+    [Range(0, 3)]
+    public int forward = 3;     // 关卡的前进方向
     public float operability;   // 玩家摇杆对鲲的控制力度
     public int energe = 100;
     public int weekEnerge = 40;         // 虚弱能量线
@@ -12,12 +14,14 @@ public class KunController : MonoBehaviour {
     public int absorbSpeed = 5;         // 每次吸收数量
     public float consumeTime = 0.5f;    // 消耗能量时间
     public int consumeSpeed = 1;        // 消耗能量速度
-    public int moveState;
-    public int moveStateY;
+    public int moveForwardX;
+    public int moveForwardY;
+
+    Vector2 startFactor = new Vector2(1, 2);
     enum MoveState { left = -1, right = 1 };
     enum MoveStateY { down = -1, up = 1 };
-    int lastMoveState;
-    int lastMoveStateY;
+    int lastMoveForwardX;
+    int lastMoveForwardY;
     int lastEnerge;
     int maxEnerge;
     float startTimer = 0;
@@ -28,16 +32,28 @@ public class KunController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        lastMoveState = (int)MoveState.right;
-        moveState = lastMoveState;
+        moveForwardX = (int)MoveState.right;
+        lastMoveForwardX = moveForwardX;
 
-        lastMoveStateY = (int)MoveStateY.up;
-        moveStateY = lastMoveStateY;
+        moveForwardY = (int)MoveStateY.up;
+        lastMoveForwardY = moveForwardY;
 
         lastEnerge = energe;
         maxEnerge = energe;
 
         originOperability = operability;
+
+        switch(forward)
+        {
+            case 0:
+            case 1:
+                startFactor = new Vector2(2, 1);
+                break;
+            case 2:
+            case 3:
+                startFactor = new Vector2(1, 2);
+                break;
+        }
 	}
 	
     public void Absorb(GameObject energeBall)
@@ -110,18 +126,18 @@ public class KunController : MonoBehaviour {
         // 方向与动画,转向处理
         if(rocker.x != 0)
         {
-            moveState = rocker.x > 0 ? (int)MoveState.right : (int)MoveState.left;
+            moveForwardX = rocker.x > 0 ? (int)MoveState.right : (int)MoveState.left;
         }
 
         if(rocker.y != 0)
         {
-            moveStateY = rocker.y > 0 ? (int)MoveStateY.up : (int)MoveStateY.down;
+            moveForwardY = rocker.y > 0 ? (int)MoveStateY.up : (int)MoveStateY.down;
         }
         
-        if(moveState != lastMoveState)
+        if(moveForwardX != lastMoveForwardX)
         {
-            GetComponent<Animator>().SetInteger("movestate", moveState);
-            lastMoveState = moveState;
+            GetComponent<Animator>().SetInteger("movestate", moveForwardX);
+            lastMoveForwardX = moveForwardX;
 
             if(GetComponent<Rigidbody2D>().velocity.magnitude > 2)
             {
@@ -130,9 +146,9 @@ public class KunController : MonoBehaviour {
             
         }
 
-        if (moveStateY != lastMoveStateY)
+        if (moveForwardY != lastMoveForwardY)
         {
-            lastMoveStateY = moveStateY;
+            lastMoveForwardY = moveForwardY;
 
             if (GetComponent<Rigidbody2D>().velocity.magnitude > 2)
             {
@@ -148,22 +164,19 @@ public class KunController : MonoBehaviour {
             // 分段起步速度（自动挡？？）
             if (GetComponent<Rigidbody2D>().velocity.magnitude < 0.2f)
             {
-                //GetComponent<Rigidbody2D>().AddForce(operability * rocker.relative.normalized * 6, ForceMode2D.Impulse);
-                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y * 2) * 6, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y) * startFactor * 6, ForceMode2D.Impulse);
             }
             if(GetComponent<Rigidbody2D>().velocity.magnitude < 0.5f)
             {
-                //GetComponent<Rigidbody2D>().AddForce(operability * rocker.relative.normalized * 4, ForceMode2D.Impulse);
-                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y * 2) * 4, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y) * startFactor * 4, ForceMode2D.Impulse);
             }
             else if(GetComponent<Rigidbody2D>().velocity.magnitude < 1)
             {
-                //GetComponent<Rigidbody2D>().AddForce(operability * rocker.relative.normalized * 2, ForceMode2D.Impulse);
-                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y * 2) * 2, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y) * startFactor * 2, ForceMode2D.Impulse);
             }
             else
             {
-                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y * 2), ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(operability * new Vector2(rocker.x, rocker.y) * startFactor, ForceMode2D.Impulse);
             }
         }
 	}

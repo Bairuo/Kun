@@ -824,6 +824,11 @@ Prefab:
       propertyPath: gemini
       value: 
       objectReference: {fileID: 1891493939}
+    - target: {fileID: 114419891070812002, guid: 5432019cefd7bd0498479e94bb47f87e,
+        type: 2}
+      propertyPath: forward
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5432019cefd7bd0498479e94bb47f87e, type: 2}
   m_IsPrefabParent: 0
@@ -988,6 +993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kun: {fileID: 1175573502}
   energe: {fileID: 95966191}
+  forward: 0
   boundary:
   - 132.13
   - 9.3
