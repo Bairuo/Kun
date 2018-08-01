@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 吸引力，不是现实中的引力模型
 public class GravitationalField : MonoBehaviour {
     public string target = "Kun";
-    public float radius;            // 无引力范围
-    public float gravitation;       // 引力大小
+    public float radius;            // 无吸引力范围
+    public float gravitation;       // 吸引力大小
 
     void OnTriggerStay2D(Collider2D other)
     {

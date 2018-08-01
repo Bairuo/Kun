@@ -565,6 +565,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1768269620515712, guid: 5432019cefd7bd0498479e94bb47f87e,
     type: 2}
   m_PrefabInternal: {fileID: 1008971205}
+--- !u!114 &1008971207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1008971206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc16f6b542549b4e8d0cd2f47c4cd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  other: {fileID: 347832405}
+  springConstant: 0.1
+  restLength: 0
+  AutoRestLength: 1
 --- !u!1 &1081847871
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kun: {fileID: 1008971206}
   energe: {fileID: 347832405}
+  forward: 3
   boundary:
   - 5.99
   - -9.41

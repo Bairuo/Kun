@@ -243,25 +243,7 @@ public class GeminiController : MonoBehaviour {
             }
         }
 
-        // 双子引力
-        if(distance > max)
-        {
-            energe.GetComponent<Rigidbody2D>().AddForce((kun.transform.position - energe.transform.position).normalized * 2 * k, ForceMode2D.Impulse);
-        }
-        else if(distance > min + (max - min) / 2)
-        {
-            energe.GetComponent<Rigidbody2D>().AddForce((kun.transform.position - energe.transform.position).normalized * 1.5f * k, ForceMode2D.Impulse);
-        }
-        else if (distance > min + (max - min) / 4)
-        {
-            energe.GetComponent<Rigidbody2D>().AddForce((kun.transform.position - energe.transform.position).normalized * 1 * k, ForceMode2D.Impulse);
-        }
-        else if(distance > min)
-        {
-            energe.GetComponent<Rigidbody2D>().AddForce((kun.transform.position - energe.transform.position).normalized * 0.5f * k, ForceMode2D.Impulse);
-        }
-
-        
+        // 突破加速与吸收能量
         if(distance < threshold)
         {
             // 借助能量球突破加速
