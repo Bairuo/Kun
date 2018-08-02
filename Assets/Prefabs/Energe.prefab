@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 50929194167460822}
   - component: {fileID: 111807983290697704}
   - component: {fileID: 95083163149333814}
+  - component: {fileID: 114207493873078690}
   m_Layer: 0
   m_Name: Energe
   m_TagString: Energe
@@ -174,6 +175,19 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114207493873078690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619966519548454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19fbe8700460b74a988a6d72daff3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  constant: 0.8
+  originConstant: 1
 --- !u!114 &114480433059730966
 MonoBehaviour:
   m_ObjectHideFlags: 1

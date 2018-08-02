@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 58360778780098888}
   - component: {fileID: 50439429194553764}
   - component: {fileID: 95844084546892954}
+  - component: {fileID: 114765162580695230}
+  - component: {fileID: 114453062894337720}
   m_Layer: 0
   m_Name: Kun
   m_TagString: Kun
@@ -186,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocker: {fileID: 0}
   deathcurtain: {fileID: 0}
+  forward: 3
   operability: 1
   energe: 100
   weekEnerge: 40
@@ -193,8 +196,8 @@ MonoBehaviour:
   absorbSpeed: 10
   consumeTime: 0.5
   consumeSpeed: 5
-  moveState: 1
-  moveStateY: 1
+  moveForwardX: 0
+  moveForwardY: 0
 --- !u!114 &114441164558413358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +213,34 @@ MonoBehaviour:
   target: {fileID: 4609061210962640}
   offsetX: 2
   offsetY: 1
+--- !u!114 &114453062894337720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768269620515712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19fbe8700460b74a988a6d72daff3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  constant: 1
+  originConstant: 1
+--- !u!114 &114765162580695230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768269620515712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc16f6b542549b4e8d0cd2f47c4cd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  other: {fileID: 0}
+  springConstant: 0.1
+  restLength: 0
+  AutoRestLength: 1
 --- !u!124 &124325622138621282
 Behaviour:
   m_ObjectHideFlags: 1

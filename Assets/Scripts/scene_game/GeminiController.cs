@@ -203,7 +203,7 @@ public class GeminiController : MonoBehaviour {
         LimitGameObject(kun);
         LimitGameObject(energe);
 
-        // 向左恒定力
+        // 向左阻力
         if(distance > min + (max - min) / 4)
         {
             kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k * 4, ForceMode2D.Impulse);
@@ -287,8 +287,9 @@ public class GeminiController : MonoBehaviour {
             }
         }
 
-        LimitVelocity(kun, maxVelocity * accelerate);
-        LimitVelocity(energe, maxVelocity);
+        //LimitVelocity(kun, maxVelocity * accelerate);
+        //LimitVelocity(energe, maxVelocity);
+        kun.GetComponent<ViscosityRigibody>().constant = kun.GetComponent<ViscosityRigibody>().originConstant / accelerate;
 
         lastDistance = distance;
 	}
