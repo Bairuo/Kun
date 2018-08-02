@@ -17,7 +17,7 @@ public class KunController : MonoBehaviour {
     public int moveForwardX;
     public int moveForwardY;
 
-    Vector2 startFactor = new Vector2(1, 2);
+    Vector2 startFactor;
     enum MoveState { left = -1, right = 1 };
     enum MoveStateY { down = -1, up = 1 };
     int lastMoveForwardX;
@@ -47,11 +47,11 @@ public class KunController : MonoBehaviour {
         {
             case 0:
             case 1:
-                startFactor = new Vector2(2, 1);
+                startFactor = new Vector2(3, 1);
                 break;
             case 2:
             case 3:
-                startFactor = new Vector2(1, 2);
+                startFactor = new Vector2(1, 3);
                 break;
         }
 	}

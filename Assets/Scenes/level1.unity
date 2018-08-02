@@ -465,6 +465,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1746624035079994, guid: 4531c847000b4d249a54176868460762, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114949119385563186, guid: 4531c847000b4d249a54176868460762, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4531c847000b4d249a54176868460762, type: 2}
@@ -1315,6 +1319,21 @@ Prefab:
       propertyPath: kun
       value: 
       objectReference: {fileID: 1896525935}
+    - target: {fileID: 198826425342358128, guid: b762c563f60e3544dbd3de7517468f36,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198826425342358128, guid: b762c563f60e3544dbd3de7517468f36,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198826425342358128, guid: b762c563f60e3544dbd3de7517468f36,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
   m_IsPrefabParent: 0
@@ -1412,9 +1431,11 @@ MonoBehaviour:
   boundaryForce: 0.5
   coefficient: 0.02
   gravitation: 0.1
-  threshold: 8
-  min: 20
-  max: 36
+  backFlowLogBase: 2.718
+  threshold: 4
+  AbsorptionRadius: 5
+  min: 4
+  max: 6
   maxVelocity: 7
   transVelocity: 0.1
 --- !u!1 &1896525935 stripped

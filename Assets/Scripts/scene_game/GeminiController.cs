@@ -11,8 +11,10 @@ public class GeminiController : MonoBehaviour {
     public float boundaryRange = 1.5f;      // 边界阻力开始范围
     public float boundaryForce = 0.5f;      // 边界阻力
     public float coefficient;   // 加速度系数
-    public float gravitation;   // 向左恒定力
+    public float gravitation = 0.1f;   // 逆流力
+    public float backFlowLogBase = 2.71f;
     public float threshold;     // threshold小于min，在阀值之内不会受到任何力的影响，在阀值之外均会受到恒定力
+    public float AbsorptionRadius = 6;
     public float min, max;     // 在min, max范围之内距离变远会受到推力
     public float maxVelocity;   // 最大速度
     public float transVelocity = 0.1f;     // 粒子转移速度
@@ -23,7 +25,6 @@ public class GeminiController : MonoBehaviour {
     KunController kunController;
     float lastDistance, distance;
     float accelerate = 1;       // 突破速度上限加速
-    float k = 1;
     float breakTimer = 0;
     bool gameover = false;
     
@@ -189,7 +190,6 @@ public class GeminiController : MonoBehaviour {
         }
 
         distance = (kun.transform.position - energe.transform.position).magnitude;
-        k = 1;
 
         // 边界
         AddRepulsion(kun, 0, boundary[2], boundaryRange, boundaryForce);
@@ -203,22 +203,30 @@ public class GeminiController : MonoBehaviour {
         LimitGameObject(kun);
         LimitGameObject(energe);
 
-        // 向左阻力
-        if(distance > min + (max - min) / 4)
+        // 关卡逆流
+        if(distance > threshold)
         {
-            kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k * 4, ForceMode2D.Impulse);
-            energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k * 4, ForceMode2D.Impulse);
+            float backflowConstant = Mathf.Log(distance - threshold + 1, backFlowLogBase);
+
+            kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * backflowConstant, ForceMode2D.Impulse);
+            energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * backflowConstant, ForceMode2D.Impulse);
         }
-        else if (distance > min)
-        {
-            kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k * 2, ForceMode2D.Impulse);
-            energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k * 2, ForceMode2D.Impulse);
-        }
-        else if(distance > threshold)
-        {
-            kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k, ForceMode2D.Impulse);
-            energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * k, ForceMode2D.Impulse);
-        }
+        
+        //if(distance > min + (max - min) / 4)
+        //{
+        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 4, ForceMode2D.Impulse);
+        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 4, ForceMode2D.Impulse);
+        //}
+        //else if (distance > min)
+        //{
+        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 2, ForceMode2D.Impulse);
+        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 2, ForceMode2D.Impulse);
+        //}
+        //else if(distance > threshold)
+        //{
+        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor, ForceMode2D.Impulse);
+        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor, ForceMode2D.Impulse);
+        //}
 
         int forwardKun = kunController.moveForwardX;
         int forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? 1 : -1;
@@ -229,8 +237,8 @@ public class GeminiController : MonoBehaviour {
             if(distance > lastDistance)
             {
                 float force = Mathf.Abs(distance - lastDistance) / Time.deltaTime * coefficient;
-                kun.GetComponent<Rigidbody2D>().AddForce(forwardKun * force * forwardFactor * k, ForceMode2D.Impulse);
-                energe.GetComponent<Rigidbody2D>().AddForce(forwardEnerge * force * forwardFactor * k, ForceMode2D.Impulse);
+                kun.GetComponent<Rigidbody2D>().AddForce(forwardKun * force * forwardFactor, ForceMode2D.Impulse);
+                energe.GetComponent<Rigidbody2D>().AddForce(forwardEnerge * force * forwardFactor, ForceMode2D.Impulse);
             }
         }
         else
@@ -238,30 +246,33 @@ public class GeminiController : MonoBehaviour {
             if (distance < lastDistance)
             {
                 float force = Mathf.Abs(distance - lastDistance) / Time.deltaTime * coefficient;
-                kun.GetComponent<Rigidbody2D>().AddForce(forwardKun * force * forwardFactor * k, ForceMode2D.Impulse);
-                energe.GetComponent<Rigidbody2D>().AddForce(forwardEnerge * force * forwardFactor * k, ForceMode2D.Impulse);
+                kun.GetComponent<Rigidbody2D>().AddForce(forwardKun * force * forwardFactor, ForceMode2D.Impulse);
+                energe.GetComponent<Rigidbody2D>().AddForce(forwardEnerge * force * forwardFactor, ForceMode2D.Impulse);
             }
         }
 
-        // 突破加速与吸收能量
+        // 突破加速
         if(distance < threshold)
         {
             // 借助能量球突破加速
             if (energe.GetComponent<EnergeController>().canAccelerate())
             {
                 breakTimer = 2;     // 设置突破时间
-                kun.GetComponent<Rigidbody2D>().AddForce(2 * forwardKun * gravitation * forwardFactor, ForceMode2D.Impulse);
+                kun.GetComponent<Rigidbody2D>().AddForce(3 * forwardKun * gravitation * forwardFactor, ForceMode2D.Impulse);
                 accelerate = 4;     // 突破倍数
             }
-            else if(distance < threshold / 2)
+            else if(distance < threshold * 0.75f)
             {
                 breakTimer = 2;
-                kun.GetComponent<Rigidbody2D>().AddForce(1.5f * forwardKun * gravitation * forwardFactor, ForceMode2D.Impulse);
+                kun.GetComponent<Rigidbody2D>().AddForce(2 * forwardKun * gravitation * forwardFactor, ForceMode2D.Impulse);
                 accelerate = 4;
             }
+        }
 
-            // 吸收能量
-            if(kun.GetComponent<KunController>().energe > 0 )
+        // 吸收能量
+        if(distance < AbsorptionRadius)
+        {
+            if (kun.GetComponent<KunController>().energe > 0)
             {
                 kun.GetComponent<KunController>().Absorb(energe);
                 particleTrans();

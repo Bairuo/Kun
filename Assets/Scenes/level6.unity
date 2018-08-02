@@ -1078,9 +1078,11 @@ MonoBehaviour:
   boundaryForce: 0.5
   coefficient: 0.02
   gravitation: 0.1
-  threshold: 8
-  min: 20
-  max: 36
+  backFlowLogBase: 2.71
+  threshold: 4
+  AbsorptionRadius: 5
+  min: 4
+  max: 6
   maxVelocity: 7
   transVelocity: 0.1
 --- !u!1 &1908929934
