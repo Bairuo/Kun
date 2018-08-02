@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1896525935}
-  shiftConstant: 0.01
+  constant: 0.1
   shiftMax: 0
 --- !u!1 &74279688
 GameObject:
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1896525935}
-  shiftConstant: 0.005
+  constant: 0.05
   shiftMax: 8.5
 --- !u!1001 &417401079
 Prefab:

@@ -5,8 +5,7 @@ using UnityEngine;
 // 单轴滚屏(x轴)
 public class SceneScroller : MonoBehaviour {
     public GameObject player;
-    //public float constant = 1;      // 系数
-    public float shiftConstant = 0;
+    public float constant = 0;      // 系数
     public float shiftMax = 0;
     float originX;
     float shift = 0;
@@ -23,22 +22,7 @@ public class SceneScroller : MonoBehaviour {
         float forward = player.transform.position.x - playerLastX;
         float shiftAdd = 0;
 
-        // 这么做好像有点晕？
-        // shiftAdd = -forward * constant * 0.5f;
-
-        if(player.GetComponent<Rigidbody2D>().velocity.magnitude < 1.5f)
-        {
-            return;
-        }
-
-        if(forward > 0)
-        {
-            shiftAdd = -shiftConstant;
-        }
-        else if(forward < 0)
-        {
-            shiftAdd = shiftConstant;
-        }
+        shiftAdd = -forward * constant;
 
         if(shiftMax == 0 || (shift + shiftAdd <= shiftMax && shift + shiftAdd >= -shiftMax))
         {
