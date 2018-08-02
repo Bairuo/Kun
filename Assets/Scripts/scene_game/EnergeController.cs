@@ -60,7 +60,12 @@ public class EnergeController : MonoBehaviour {
     {
         if(other.tag == "Memory")
         {
-            GetComponent<Animation>().Play();
+            //GetComponent<Animation>().Play();
+            GetComponent<Twinkle>().ClearAllKeys();
+            GetComponent<Twinkle>().AddKey(0, GetComponent<SpriteRenderer>().color.a);
+            GetComponent<Twinkle>().AddKey(40, GetComponent<SpriteRenderer>().color.a * 0.5f);
+            GetComponent<Twinkle>().AddKey(80, GetComponent<SpriteRenderer>().color.a);
+            GetComponent<Twinkle>().Play();
         }
     }
 
@@ -68,7 +73,8 @@ public class EnergeController : MonoBehaviour {
     {
         if(other.tag == "Memory")
         {
-            GetComponent<Animation>().Stop();
+            //GetComponent<Animation>().Stop();
+            GetComponent<Twinkle>().Stop();
         }
     }
 
