@@ -32,6 +32,7 @@ public class DeathEffect : MonoBehaviour {
             Excute(i);
             i++;
         }
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BlackWhiteEffect>().ImmediateExecute();
     }
 
     void Excute(int i)

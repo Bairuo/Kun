@@ -7,6 +7,11 @@ public class BlackWhiteEffect : PostEffectBase
     public float time = 4;
     float timer = 0;
 
+    public void ImmediateExecute()
+    {
+        timer = time;
+    }
+
     public void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         timer += Time.deltaTime;
