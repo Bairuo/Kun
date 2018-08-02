@@ -363,6 +363,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: fd84cc703179f114484a11353727afb6,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -413,6 +418,11 @@ Prefab:
         type: 2}
       propertyPath: energe
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -606,6 +616,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: eab4bc5ee7cf57a4588813fee26f84fd,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: regenerate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -656,6 +676,11 @@ Prefab:
         type: 2}
       propertyPath: energe
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -765,7 +790,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 33.28, y: 146.09}
+    oldSize: {x: 33.280003, y: 146.09}
     newSize: {x: 19.09, y: 11.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -966,6 +991,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 2a48cefc84b2fa24baa10e05dd5acc88,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -1023,6 +1053,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 86649d4fb46c9f54c96e26882ba776f8,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -1206,6 +1241,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 40f6853847fb10b4c9d885a4e1d88b1b,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0

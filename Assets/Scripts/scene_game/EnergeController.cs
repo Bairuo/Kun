@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnergeController : MonoBehaviour {
     public GameObject kun;
+    public float SeparationDistance;
     public int energe = 100;
     public int minEnerge = 35;
     public float accelerateWaitTime = 2;
@@ -80,7 +81,7 @@ public class EnergeController : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Memory" && energe < maxEnerge)
+        if (other.tag == "Memory" && energe < maxEnerge && (kun.transform.position - this.transform.position).magnitude > SeparationDistance)
         {
             energe += other.GetComponent<MemoryController>().Exploit();
         }

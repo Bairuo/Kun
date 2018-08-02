@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MemoryController : MonoBehaviour {
     public int energe;
+    public float frequency = 0.5f;     // 开采频率
     public int speed;       // 每秒开采
     public bool regenerate = false;     // 是否重生
     public int generateSpeed;           // 重生速度
@@ -23,7 +24,7 @@ public class MemoryController : MonoBehaviour {
         // 计时是否可产出
         timer += Time.deltaTime;
 
-        if(timer > 1)
+        if(timer > frequency)
         {
             timer = 0;
             prepare = true;

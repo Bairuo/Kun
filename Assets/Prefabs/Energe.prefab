@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 58369243845273740}
   - component: {fileID: 114480433059730966}
   - component: {fileID: 50929194167460822}
-  - component: {fileID: 111807983290697704}
   - component: {fileID: 95083163149333814}
   - component: {fileID: 114207493873078690}
+  - component: {fileID: 114536304922180688}
   m_Layer: 0
   m_Name: Energe
   m_TagString: Energe
@@ -160,21 +160,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &111807983290697704
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1619966519548454}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: de9d65c455b1ef54b82e1ef9794ee97a, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: de9d65c455b1ef54b82e1ef9794ee97a, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &114207493873078690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,9 +185,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kun: {fileID: 0}
+  SeparationDistance: 5
   energe: 100
   minEnerge: 10
   accelerateWaitTime: 2
+--- !u!114 &114536304922180688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619966519548454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264d145c92fa95149b5157810b1974ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loop: 1
 --- !u!198 &198826425342358128
 ParticleSystem:
   m_ObjectHideFlags: 1
