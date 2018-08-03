@@ -311,6 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 4.5
   FadeTime: 2
+  TargetAlpha: 1
+  AutoTarget: 0
 --- !u!1 &538409391
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 2
   FadeTime: 2
+  TargetAlpha: 1
+  AutoTarget: 0
 --- !u!1 &752603737
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 7
   FadeTime: 2
+  TargetAlpha: 1
+  AutoTarget: 0
 --- !u!1 &1478394847
 GameObject:
   m_ObjectHideFlags: 0
