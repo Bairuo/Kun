@@ -87,6 +87,11 @@ public class EnergeController : MonoBehaviour {
         }
     }
 
+    public bool IsWeek()
+    {
+        return energe <= minEnerge;
+    }
+
     public int getEnerge(int demand)
     {
         if(energe - minEnerge > demand)

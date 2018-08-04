@@ -192,8 +192,8 @@ MonoBehaviour:
   operability: 1
   energe: 100
   weekEnerge: 40
-  absorbTime: 0.5
-  absorbSpeed: 10
+  absorbTime: 0.1
+  absorbSpeed: 2
   consumeTime: 0.5
   consumeSpeed: 5
   moveForwardX: 0

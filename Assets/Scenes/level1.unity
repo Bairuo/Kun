@@ -516,6 +516,11 @@ Prefab:
       propertyPath: other
       value: 
       objectReference: {fileID: 670026225}
+    - target: {fileID: 114441164558413358, guid: 5432019cefd7bd0498479e94bb47f87e,
+        type: 2}
+      propertyPath: gemini
+      value: 
+      objectReference: {fileID: 1891493939}
     - target: {fileID: 114419891070812002, guid: 5432019cefd7bd0498479e94bb47f87e,
         type: 2}
       propertyPath: rocker
@@ -526,11 +531,6 @@ Prefab:
       propertyPath: deathcurtain
       value: 
       objectReference: {fileID: 1977138804}
-    - target: {fileID: 114441164558413358, guid: 5432019cefd7bd0498479e94bb47f87e,
-        type: 2}
-      propertyPath: gemini
-      value: 
-      objectReference: {fileID: 1891493939}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5432019cefd7bd0498479e94bb47f87e, type: 2}
   m_IsPrefabParent: 0
@@ -690,7 +690,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -920,7 +925,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1091,7 +1101,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1334,7 +1349,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1396,7 +1416,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1495,7 +1520,12 @@ Prefab:
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: speed
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: frequency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1558,6 +1588,7 @@ MonoBehaviour:
   min: 4
   max: 6
   maxVelocity: 7
+  transAnimationTime: 1.5
   transVelocity: 0.1
 --- !u!1 &1896525935 stripped
 GameObject:

@@ -17,6 +17,7 @@ public class GeminiController : MonoBehaviour {
     public float AbsorptionRadius = 6;
     public float min, max;     // 在min, max范围之内距离变远会受到推力
     public float maxVelocity;   // 最大速度
+    public float transAnimationTime = 1.5f;  // 转移动画时长
     public float transVelocity = 0.1f;     // 粒子转移速度
 
     Vector2 forwardFactor = new Vector2(1, 0);      // 水平，正向
@@ -26,6 +27,7 @@ public class GeminiController : MonoBehaviour {
     float lastDistance, distance;
     float accelerate = 1;       // 突破速度上限加速
     float breakTimer = 0;
+    float transAnimationTimer;
     bool gameover = false;
     
     void Awake()
@@ -40,8 +42,20 @@ public class GeminiController : MonoBehaviour {
         }
     }
 
+    void StartTransAnimation()
+    {
+        transAnimationTimer = 0;
+    }
+
     void particleTrans()
     {
+        if(transAnimationTimer > transAnimationTime)
+        {
+            return;
+        }
+
+        transAnimationTimer += Time.deltaTime;
+
         if(particleSys)
         {
             int count = particleSys.GetParticles(particles);
@@ -211,22 +225,6 @@ public class GeminiController : MonoBehaviour {
             kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * backflowConstant, ForceMode2D.Impulse);
             energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * backflowConstant, ForceMode2D.Impulse);
         }
-        
-        //if(distance > min + (max - min) / 4)
-        //{
-        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 4, ForceMode2D.Impulse);
-        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 4, ForceMode2D.Impulse);
-        //}
-        //else if (distance > min)
-        //{
-        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 2, ForceMode2D.Impulse);
-        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * 2, ForceMode2D.Impulse);
-        //}
-        //else if(distance > threshold)
-        //{
-        //    kun.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor, ForceMode2D.Impulse);
-        //    energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor, ForceMode2D.Impulse);
-        //}
 
         int forwardKun = kunController.moveForwardX;
         int forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? 1 : -1;
@@ -274,7 +272,11 @@ public class GeminiController : MonoBehaviour {
         {
             if (kun.GetComponent<KunController>().energe > 0)
             {
-                kun.GetComponent<KunController>().Absorb(energe);
+                if(kun.GetComponent<KunController>().Absorb(energe))
+                {
+                    StartTransAnimation();
+                }
+
                 particleTrans();
             }
         }

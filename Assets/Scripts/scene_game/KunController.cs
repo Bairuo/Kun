@@ -55,15 +55,34 @@ public class KunController : MonoBehaviour {
                 break;
         }
 	}
+
+    public bool EnergySaturation()
+    {
+        return energe >= maxEnerge;
+    }
 	
-    public void Absorb(GameObject energeBall)
+    public bool Absorb(GameObject energeBall)
     {
         EnergeController energeController = energeBall.GetComponent<EnergeController>();
-        if(absorbWait && energe < maxEnerge)
+        if(absorbWait && !EnergySaturation())
         {
             absorbWait = false;
             absorbTimer = 0;
-            energe += energeController.getEnerge(absorbSpeed);
+            int getEnerge = energeController.getEnerge(absorbSpeed);
+            energe += getEnerge;
+
+            if(getEnerge > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
         }
     }
 
