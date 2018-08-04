@@ -16,6 +16,7 @@ public class KunController : MonoBehaviour {
     public int consumeSpeed = 1;        // 消耗能量速度
     public int moveForwardX;
     public int moveForwardY;
+    public bool invincible = false;
 
     Vector2 startFactor;
     enum MoveState { left = -1, right = 1 };
@@ -110,7 +111,7 @@ public class KunController : MonoBehaviour {
             absorbTimer = 0;
         }
 
-        if(consumeTimer > consumeTime)
+        if(consumeTimer > consumeTime && !invincible)
         {
             consumeTimer = 0;
             if(energe > 0)

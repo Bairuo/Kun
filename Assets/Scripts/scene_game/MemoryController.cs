@@ -24,6 +24,11 @@ public class MemoryController : MonoBehaviour {
         // 计时是否可产出
         timer += Time.deltaTime;
 
+        if(energe == 0 && !regenerate)
+        {
+            Destroy(this.gameObject);
+        }
+
         if(timer > frequency)
         {
             timer = 0;

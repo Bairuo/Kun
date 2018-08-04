@@ -9,6 +9,7 @@ public class NextLevelTrigger : MonoBehaviour {
     {
         if(other.tag == "Kun")
         {
+            other.GetComponent<KunController>().invincible = true;
             curtain.SetActive(true);
         }
         
