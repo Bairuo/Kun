@@ -983,6 +983,11 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10d29e9ac5400744381e45022bb8e1ed, type: 2}
+    - target: {fileID: 82415511581792430, guid: 4531c847000b4d249a54176868460762,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: caf3313c3030ada47acfa8e6fc564517, type: 3}
     m_RemovedComponents:
     - {fileID: 82498075126941998, guid: 4531c847000b4d249a54176868460762, type: 2}
     - {fileID: 328057830546540560, guid: 4531c847000b4d249a54176868460762, type: 2}
