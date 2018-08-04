@@ -1581,6 +1581,7 @@ GameObject:
   - component: {fileID: 2126408554}
   - component: {fileID: 2126408556}
   - component: {fileID: 2126408557}
+  - component: {fileID: 2126408558}
   m_Layer: 5
   m_Name: Level1Item
   m_TagString: Untagged
@@ -1670,8 +1671,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2126408556}
-          m_MethodName: Onclick
+        - m_Target: {fileID: 2126408558}
+          m_MethodName: FirstGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1684,3 +1685,15 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &2126408558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126408552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ed001b1a943e84f9465e449bcf12c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  develop: 1

@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
         maxlevel = PlayerPrefs.GetInt("maxlevel", 0);
     }
 
-    public static void FirstGame()
+    public void FirstGame()
     {
         if(!PlayerPrefs.HasKey("FirstGame"))
         {
