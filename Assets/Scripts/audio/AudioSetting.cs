@@ -10,11 +10,31 @@ public class AudioSetting : MonoBehaviour {
     public Slider AudioSlider;    // 音乐
     public Slider AudioEffectSlider;      // 音效   
 
-    public AudioSource audio;
+    public GameObject BGMPrefab;
+    AudioSource BGM;
     public AudioSource[] audioEffects;
 
     void Start()
     {
+        GameObject existBGM = GameObject.FindGameObjectWithTag("BGM");
+
+        if(existBGM == null)
+        {
+            BGM = Instantiate(BGMPrefab).GetComponent<AudioSource>();
+        }
+        else
+        {
+            if(existBGM.GetComponent<AudioSource>().clip.name != BGMPrefab.GetComponent<AudioSource>().clip.name)
+            {
+                Destroy(existBGM);
+                BGM = Instantiate(BGMPrefab).GetComponent<AudioSource>();
+            }
+            else
+            {
+                BGM = existBGM.GetComponent<AudioSource>();
+            }
+        }
+
         AudioSlider.value = audioVolume;
         AudioEffectSlider.value = audioEffectVolume;
 
@@ -24,7 +44,7 @@ public class AudioSetting : MonoBehaviour {
 
 	public void ChangeAudio()
     {
-        audio.volume = AudioSlider.value;
+        BGM.volume = AudioSlider.value;
         audioVolume = AudioSlider.value;
     }
 

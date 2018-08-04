@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Energe
-  radius: 0
-  gravitation: 0.1
+  safeRadius: 0
+  constant: 0
 --- !u!114 &114355964331464338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energe: 100
+  frequency: 0.5
   speed: 30
   regenerate: 0
   generateSpeed: 0
@@ -190,8 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: Energe
-  radius: 0
-  gravitation: 0.1
+  safeRadius: 0
+  constant: 0
 --- !u!212 &212128557345028730
 SpriteRenderer:
   m_ObjectHideFlags: 1

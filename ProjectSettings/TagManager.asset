@@ -8,6 +8,7 @@ TagManager:
   - Energe
   - Memory
   - Leaf
+  - BGM
   layers:
   - Default
   - TransparentFX

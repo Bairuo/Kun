@@ -59,14 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a830d514f8bb642b3c18dafc1d918e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelNames:
-  - level1
-  - level2
-  - level3
-  - level4
-  - level5
-  - CG_56
-  - level6
   develop: 0
   nowLevel: 0
 --- !u!114 &114673560057034894
