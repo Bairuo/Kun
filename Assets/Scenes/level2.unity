@@ -963,7 +963,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 95995752237582244, guid: 4531c847000b4d249a54176868460762,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 10d29e9ac5400744381e45022bb8e1ed, type: 2}
+    m_RemovedComponents:
+    - {fileID: 82498075126941998, guid: 4531c847000b4d249a54176868460762, type: 2}
+    - {fileID: 328057830546540560, guid: 4531c847000b4d249a54176868460762, type: 2}
+    - {fileID: 114010827219493918, guid: 4531c847000b4d249a54176868460762, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4531c847000b4d249a54176868460762, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1279966818 stripped
@@ -1024,6 +1032,33 @@ MonoBehaviour:
   TargetAlpha: 1
   AutoTarget: 1
   CanBeInterrupted: 1
+--- !u!114 &1279966825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279966820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!1001 &1312281407
 Prefab:
   m_ObjectHideFlags: 0
