@@ -3,21 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Leaf : MonoBehaviour {
-    public float strength = 100;
+    public float shootStrength = 120;
+    public float gravitationStrength = 0.04f;
+    public float gravitationActiveTime = 5;
     public float rotate = 2;
-    public float maxSpeed = 5;
+    float timer = 0;
+    bool gravitationActive = false;
 
 	void Start () {
         float emissionAngle = Random.Range(0, 2 * Mathf.PI);
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Sin(emissionAngle), Mathf.Cos(emissionAngle)) * strength);
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(shootStrength * Mathf.Sin(emissionAngle), Mathf.Cos(emissionAngle)));
         GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 2 * Mathf.PI) * rotate);
 	}
 	
     void FixedUpdate()
     {
-        //if(GetComponent<Rigidbody2D>().velocity.magnitude > maxSpeed)
-        //{
-        //    GetComponent<Rigidbody2D>().velocity *= maxSpeed / GetComponent<Rigidbody2D>().velocity.magnitude;
-        //}
+        if(!gravitationActive)
+        {
+            timer += Time.deltaTime;
+        }
+        
+
+        if(timer >= gravitationActiveTime)
+        {
+            gravitationActive = true;
+        }
+
+        if(gravitationActive)
+        {
+            float x = Input.acceleration.x;
+            float y = Input.acceleration.y;
+
+            GetComponent<Rigidbody2D>().AddForce(gravitationStrength * new Vector2(x, y), ForceMode2D.Impulse);
+        }
     }
 }

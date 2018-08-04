@@ -879,9 +879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68684734f0ed491429b2b93e6ec20976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 120
+  shootStrength: 120
+  gravitationStrength: 0.04
+  gravitationActiveTime: 5
   rotate: 10
-  maxSpeed: 5
 --- !u!114 &445579531
 MonoBehaviour:
   m_ObjectHideFlags: 0
