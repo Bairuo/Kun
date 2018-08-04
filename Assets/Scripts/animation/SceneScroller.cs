@@ -4,7 +4,7 @@ using UnityEngine;
 
 // 单轴滚屏(x轴)
 public class SceneScroller : MonoBehaviour {
-    public GameObject player;
+    public GameObject target;
     public float constant = 0;      // 系数
     public float shiftMax = 0;
     float originX;
@@ -14,12 +14,12 @@ public class SceneScroller : MonoBehaviour {
     void Start()
     {
         originX = transform.position.x;
-        playerLastX = player.transform.position.x;
+        playerLastX = target.transform.position.x;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        float forward = player.transform.position.x - playerLastX;
+        float forward = target.transform.position.x - playerLastX;
         float shiftAdd = 0;
 
         shiftAdd = -forward * constant;
@@ -30,6 +30,6 @@ public class SceneScroller : MonoBehaviour {
             transform.position = new Vector3(originX + shift, transform.position.y, 0);
         }
 
-        playerLastX = player.transform.position.x;
+        playerLastX = target.transform.position.x;
 	}
 }

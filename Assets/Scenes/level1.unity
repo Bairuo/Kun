@@ -474,8 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc78db3dc79a1fc48bda182458813f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1896525935}
-  constant: 0.13
+  target: {fileID: 2060718035}
+  constant: -0.6
   shiftMax: 0
 --- !u!1 &74279688
 GameObject:
@@ -526,6 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131116128}
   - component: {fileID: 131116127}
+  - component: {fileID: 131116129}
   m_Layer: 0
   m_Name: "Scene_\u8FD1\u5904\u906E\u6321\u7269"
   m_TagString: Untagged
@@ -591,6 +592,20 @@ Transform:
   m_Father: {fileID: 2049432077}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131116129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131116126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc78db3dc79a1fc48bda182458813f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2060718035}
+  constant: 0.3
+  shiftMax: 0
 --- !u!1 &154806877
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,9 +1014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc78db3dc79a1fc48bda182458813f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1896525935}
-  constant: 0.08
-  shiftMax: 8.5
+  target: {fileID: 2060718035}
+  constant: -0.3
+  shiftMax: 0
 --- !u!1 &321506279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,6 +5371,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2060718035 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1754584627105408, guid: 5432019cefd7bd0498479e94bb47f87e,
+    type: 2}
+  m_PrefabInternal: {fileID: 705041785}
 --- !u!1 &2090648245
 GameObject:
   m_ObjectHideFlags: 0
