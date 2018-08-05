@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca8853f394aee24cae4d1e7356f03db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Whitening: {fileID: 264912105}
+  Whitening: {fileID: 0}
   animators:
   - {fileID: 1276597887}
   - {fileID: 538409396}
@@ -383,17 +383,17 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3dd229d9e812319479c3c32e712e60d8, type: 2}
+    - target: {fileID: 224485767678631482, guid: c75ef0f3351b396419d5336cbdd03d00,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c75ef0f3351b396419d5336cbdd03d00, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &264912104 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224763562123478974, guid: c75ef0f3351b396419d5336cbdd03d00,
-    type: 2}
-  m_PrefabInternal: {fileID: 264912103}
---- !u!1 &264912105 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1866772037809732, guid: c75ef0f3351b396419d5336cbdd03d00,
+  m_PrefabParentObject: {fileID: 224485767678631482, guid: c75ef0f3351b396419d5336cbdd03d00,
     type: 2}
   m_PrefabInternal: {fileID: 264912103}
 --- !u!1 &538409391
@@ -601,7 +601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b42c8c32976244cb676fccb67c1496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Darkening: {fileID: 2109925367}
+  Darkening: {fileID: 0}
+  startTime: -1
 --- !u!1 &1504578043
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,16 +956,16 @@ Prefab:
       propertyPath: nowLevel
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 114078115916487790, guid: 1a6b890bb70851c468a09bfb65665bf4,
+        type: 2}
+      propertyPath: nowLevel
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a6b890bb70851c468a09bfb65665bf4, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &2109925366 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224290172047744320, guid: 1a6b890bb70851c468a09bfb65665bf4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2109925365}
---- !u!1 &2109925367 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1354998733126474, guid: 1a6b890bb70851c468a09bfb65665bf4,
+  m_PrefabParentObject: {fileID: 224493921765671196, guid: 1a6b890bb70851c468a09bfb65665bf4,
     type: 2}
   m_PrefabInternal: {fileID: 2109925365}

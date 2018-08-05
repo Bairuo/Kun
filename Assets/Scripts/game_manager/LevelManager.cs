@@ -49,6 +49,11 @@ public class LevelManager : MonoBehaviour {
 
     public static void Enter(int index)
     {
+        if(index >= LevelNames.Length)
+        {
+            return;
+        }
+
         SceneManager.LoadScene(LevelNames[index]);
     }
 
