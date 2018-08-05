@@ -15,8 +15,9 @@ public class RollingSelection : MonoBehaviour {
     public float maxY;
     public float lerpDuration = 0.6f;
     int[] layer = new int[] {3, 4, 2, 5, 1, 0};
-    float currentDuration;
-    bool run = false;
+    float currentDuration = 0;
+    int runNum = 0;     // 本次转动次数
+    int runRest = 0;    // 余下的次数
     bool layerExChange = false;
     int forward;
 
@@ -26,33 +27,63 @@ public class RollingSelection : MonoBehaviour {
         {
             Ykeys[i] = 1.0f * i / Ykeys.Length;
         }
+
+        // LevelManager设计不当，后修改
+        if (LevelManager.maxlevel > 0 && LevelManager.maxlevel <= 3)
+        {
+            Left(LevelManager.maxlevel);
+        }
+        else if(LevelManager.maxlevel == 4)
+        {
+            Right(2);
+        }
+        else if(LevelManager.maxlevel > 4)
+        {
+            Right(1);
+        }
+    }
+
+    public void Right(int n)
+    {
+        if(runRest > 0)
+        {
+            return;
+        }
+
+        forward = 1;
+
+        runNum = n;
+        runRest = n;
+    }
+
+    public void Left(int n)
+    {
+        if(runRest > 0)
+        {
+            return;
+        }
+
+        forward = 0;
+
+        runNum = n;
+        runRest = n;
     }
 
     public void Right()
     {
-        if(run)
-        {
-            return;
-        }
-
-        currentDuration = 0;
-        layerExChange = false;
-        forward = 1;
-        run = true;
+        Right(1);
     }
 
     public void Left()
     {
-        if(run)
-        {
-            return;
-        }
-
-        currentDuration = 0;
-        layerExChange = false;
-        forward = 0;
-        run = true;
+        Left(1);
     }
+
+    float GetSpreadX(float percent)
+    {
+        return -Mathf.Abs(percent - 0.5f) + 1.5f;
+    }
+
 
     float GetPosX(int keyNum, float percent, int forward)
     {
@@ -82,7 +113,7 @@ public class RollingSelection : MonoBehaviour {
         }
 
 
-        float posX = positionXAnimationCurve.Evaluate(sliderValue) * (maxX - startX) * (-Mathf.Abs(percent - 0.5f) + 1.5f);
+        float posX = positionXAnimationCurve.Evaluate(sliderValue) * (maxX - startX) * GetSpreadX(percent);
         
         if(sliderValue - (int)sliderValue > 0.5f)
         {
@@ -141,7 +172,7 @@ public class RollingSelection : MonoBehaviour {
 
 	void FixedUpdate () 
     {
-        if(!run)
+        if(runRest == 0)
         {
             return;
         }
@@ -201,7 +232,14 @@ public class RollingSelection : MonoBehaviour {
 
         if (currentDuration >= lerpDuration)
         {
-            run = false;
+            runRest--;
+            currentDuration = 0;
+            layerExChange = false;
+
+            if(runRest == 0)
+            {
+                runNum = 0;
+            }
         }
 	}
 }
