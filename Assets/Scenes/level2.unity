@@ -2635,7 +2635,7 @@ MonoBehaviour:
   textOutput: {fileID: 1843693624}
   hideButtons:
   - {fileID: 1524549514}
-  - {fileID: 0}
+  - {fileID: 1226900849}
   displayButtons:
   - {fileID: 1584361266}
   - {fileID: 384188187}

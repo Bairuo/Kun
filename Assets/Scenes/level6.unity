@@ -1410,7 +1410,7 @@ MonoBehaviour:
   textOutput: {fileID: 245723680}
   hideButtons:
   - {fileID: 1318423424}
-  - {fileID: 0}
+  - {fileID: 2011131654}
   displayButtons:
   - {fileID: 493634848}
   - {fileID: 2095664001}
