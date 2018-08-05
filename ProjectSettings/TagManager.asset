@@ -9,6 +9,8 @@ TagManager:
   - Memory
   - Leaf
   - BGM
+  - GameOperate
+  - Rocker
   layers:
   - Default
   - TransparentFX

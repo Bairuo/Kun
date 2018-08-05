@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KunController : MonoBehaviour {
-    public Rocker rocker;
+    Rocker rocker;
     public GameObject deathcurtain;
     [Range(0, 3)]
     public int forward = 3;     // 关卡的前进方向
@@ -33,6 +33,8 @@ public class KunController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        rocker = GameObject.FindGameObjectWithTag("Rocker").GetComponent<Rocker>();
+
         moveForwardX = (int)MoveState.right;
         lastMoveForwardX = moveForwardX;
 

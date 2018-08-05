@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 95844084546892954}
   - component: {fileID: 114765162580695230}
   - component: {fileID: 114453062894337720}
+  - component: {fileID: 114784851001086888}
   m_Layer: 0
   m_Name: Kun
   m_TagString: Kun
@@ -198,6 +199,7 @@ MonoBehaviour:
   consumeSpeed: 5
   moveForwardX: 0
   moveForwardY: 0
+  invincible: 0
 --- !u!114 &114441164558413358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,6 +243,21 @@ MonoBehaviour:
   springConstant: 0.1
   restLength: 0
   AutoRestLength: 1
+--- !u!114 &114784851001086888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768269620515712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429eaf83c42f4ab4d9f6d568fabc01ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 114419891070812002}
+  - {fileID: 114765162580695230}
+  - {fileID: 114453062894337720}
 --- !u!124 &124325622138621282
 Behaviour:
   m_ObjectHideFlags: 1
