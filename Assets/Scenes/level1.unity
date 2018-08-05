@@ -1697,6 +1697,11 @@ Prefab:
       propertyPath: frequency
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114824890919010554, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: target
+      value: Kun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -3516,6 +3521,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220369427832004, guid: c75ef0f3351b396419d5336cbdd03d00, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c75ef0f3351b396419d5336cbdd03d00, type: 2}

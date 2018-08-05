@@ -10,6 +10,12 @@ public class GravitationalField : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other)
     {
         Vector2 forward = transform.position - other.transform.position;
+
+        if(safeRadius == 0)
+        {
+            return;
+        }
+
         if(other.tag == target && forward.magnitude > safeRadius)
         {
             float dis = forward.magnitude;
