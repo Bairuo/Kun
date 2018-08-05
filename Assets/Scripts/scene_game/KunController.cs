@@ -50,11 +50,11 @@ public class KunController : MonoBehaviour {
         {
             case 0:
             case 1:
-                startFactor = new Vector2(3, 1);
+                startFactor = new Vector2(2.8f, 1);
                 break;
             case 2:
             case 3:
-                startFactor = new Vector2(1, 3);
+                startFactor = new Vector2(1, 2.8f);
                 break;
         }
 	}
