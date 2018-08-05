@@ -10,6 +10,7 @@ public class GameOperate : MonoBehaviour {
     public void Awake()
     {
         pausers = new List<Pauser>();
+        ObjectPause = false;
     }
 
 	public void Return()

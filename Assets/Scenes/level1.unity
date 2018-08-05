@@ -1715,6 +1715,8 @@ GameObject:
   - component: {fileID: 893126326}
   - component: {fileID: 893126327}
   - component: {fileID: 893126328}
+  - component: {fileID: 893126330}
+  - component: {fileID: 893126329}
   m_Layer: 0
   m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE"
   m_TagString: Untagged
@@ -1794,6 +1796,47 @@ MonoBehaviour:
   speed: -0.005
   boundmax: 0.3
   boundmin: 0.3
+--- !u!114 &893126329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893126325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7478f202f77b754a97354190ba38282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 893126328}
+--- !u!114 &893126330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893126325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4646075db6d79ca4b94f7cacc4279df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1977138804}
+  onActiveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 893126329}
+        m_MethodName: Forbid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &899854334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3741,6 +3784,8 @@ GameObject:
   - component: {fileID: 1534571333}
   - component: {fileID: 1534571335}
   - component: {fileID: 1534571334}
+  - component: {fileID: 1534571337}
+  - component: {fileID: 1534571336}
   m_Layer: 0
   m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE (1)"
   m_TagString: Untagged
@@ -3820,6 +3865,47 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1534571336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1534571332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7478f202f77b754a97354190ba38282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours:
+  - {fileID: 1534571334}
+--- !u!114 &1534571337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1534571332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4646075db6d79ca4b94f7cacc4279df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1977138804}
+  onActiveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1534571336}
+        m_MethodName: Forbid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1537079918
 GameObject:
   m_ObjectHideFlags: 0

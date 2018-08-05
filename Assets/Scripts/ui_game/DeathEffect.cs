@@ -22,6 +22,8 @@ public class DeathEffect : MonoBehaviour {
 
         GameObject.FindGameObjectWithTag("MainCamera").AddComponent<BlackWhiteEffect>();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<BlackWhiteEffect>().shader = postEffect;
+
+        GameObject.FindGameObjectWithTag("GameOperate").GetComponent<GameOperate>().PauseObjects();
     }
 
 	
