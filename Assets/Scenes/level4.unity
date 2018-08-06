@@ -875,7 +875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a830d514f8bb642b3c18dafc1d918e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  develop: 0
   nowLevel: 3
 --- !u!95 &365187306
 Animator:
@@ -3771,6 +3770,11 @@ Prefab:
       propertyPath: kun
       value: 
       objectReference: {fileID: 509735606}
+    - target: {fileID: 114195416757578006, guid: b762c563f60e3544dbd3de7517468f36,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 365187297}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
   m_IsPrefabParent: 0

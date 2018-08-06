@@ -28,7 +28,6 @@ public class GeminiController : MonoBehaviour {
     float accelerate = 1;       // 突破速度上限加速
     float breakTimer = 0;
     float transAnimationTimer;
-    bool gameover = false;
     
     void Awake()
     {
@@ -190,19 +189,6 @@ public class GeminiController : MonoBehaviour {
     
     void FixedUpdate()
     {
-        if(kun.GetComponent<KunController>().energe <= 0)
-        {
-            if(!gameover)
-            {
-                energe.GetComponent<Animator>().enabled = false;
-                energe.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-                energe.GetComponentInChildren<ParticleSystem>().Clear();
-                energe.GetComponentInChildren<ParticleSystem>().Stop();
-                gameover = true;
-            }
-            return;
-        }
-
         distance = (kun.transform.position - energe.transform.position).magnitude;
 
         // 边界
