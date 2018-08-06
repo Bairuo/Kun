@@ -7,11 +7,11 @@ public class NextLevel : LevelManager {
 
     public void EnterNextLevel()
     {
-        int maxlevel = PlayerPrefs.GetInt("maxlevel");
+        int maxlevel = LevelManager.maxlevel;
         
         if(maxlevel == nowLevel)
         {
-            PlayerPrefs.SetInt("maxlevel", nowLevel + 1);
+            LevelManager.UpdateMaxLevel(nowLevel + 1);
         }
 
         Enter(nowLevel + 1);

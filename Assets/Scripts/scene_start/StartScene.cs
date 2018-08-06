@@ -8,7 +8,7 @@ public class StartScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        int maxlevel = PlayerPrefs.GetInt("maxlevel", 0);
+        int maxlevel = LevelManager.maxlevel;
 
         if(maxlevel == 0)
         {

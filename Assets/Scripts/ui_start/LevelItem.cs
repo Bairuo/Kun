@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class LevelItem : MonoBehaviour {
     public Sprite ActivedImage;
     public Sprite InactivatedImage;
-    public int level;
+    public int activeLevel;
     public int keyNum;
+    public int enterLevel;
     bool levelActive;
 
 	// Use this for initialization
 	void Start () {
-		if(level > LevelManager.maxlevel)
+		if(activeLevel > LevelManager.maxlevel)
         {
             levelActive = false;
             GetComponent<Image>().sprite = InactivatedImage;
@@ -28,7 +29,7 @@ public class LevelItem : MonoBehaviour {
     {
         if(keyNum == 0 && levelActive)
         {
-            LevelManager.Enter(level);
+            LevelManager.Enter(enterLevel);
         }
     }
 }

@@ -5,23 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
     public static string[] LevelNames = {"level1", "level2", "level3", "level4", "level5", "CG_56", "level6", "CG_破水", "CG_化鹏"};
-    public static int maxlevel = 0;
-    public bool develop = false;
- 
-    void Start()
+    public static int maxlevel
     {
-        if(develop)
+        get
+        {
+            if(_maxlevel == -1)
+            {
+                Init();
+            }
+
+            return _maxlevel;
+        }
+        set
+        {
+            _maxlevel = value;
+        }
+    }
+    static bool develop = false;
+    static int _maxlevel = -1;
+
+    public static void UpdateMaxLevel(int newMax)
+    {
+        maxlevel = newMax;
+        PlayerPrefs.SetInt("maxlevel", newMax);
+    }
+
+    static void Init()
+    {
+        if (develop)
         {
             PlayerPrefs.DeleteAll();
         }
 
-        if(!PlayerPrefs.HasKey("maxlevel"))
+        if (!PlayerPrefs.HasKey("maxlevel"))
         {
             PlayerPrefs.SetInt("maxlevel", 0);
         }
 
         maxlevel = PlayerPrefs.GetInt("maxlevel", 0);
     }
+ 
 
     public void FirstGame()
     {
