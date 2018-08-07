@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 131116127}
   - component: {fileID: 131116129}
   m_Layer: 0
-  m_Name: "Scene_\u8FD1\u5904\u906E\u6321\u7269"
+  m_Name: "Scene_\u5C71\u5761\uFF08\u8FD1\u5904\u906E\u6321\u7269\uFF09"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 196956244}
   m_Layer: 5
   m_Name: GameCanvas
-  m_TagString: Untagged
+  m_TagString: GameCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 893126330}
   - component: {fileID: 893126329}
   m_Layer: 0
-  m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE"
+  m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE\uFF08\u8FD1\u5904\u906E\u6321\u7269\uFF09"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1821,6 +1821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1977138804}
+  targetTag: 
   onActiveEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3786,7 +3787,7 @@ GameObject:
   - component: {fileID: 1534571337}
   - component: {fileID: 1534571336}
   m_Layer: 0
-  m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE (1)"
+  m_Name: "Scene_\u6D6E\u52A8\u7684\u70DF\u96FE (1)\uFF08\u8FD1\u5904\u906E\u6321\u7269\uFF09"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3889,6 +3890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1977138804}
+  targetTag: 
   onActiveEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4611,7 +4613,7 @@ GameObject:
   - component: {fileID: 1977138806}
   m_Layer: 5
   m_Name: DeathCurtain
-  m_TagString: Untagged
+  m_TagString: DeathCurtain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,6 +11,9 @@ TagManager:
   - BGM
   - GameOperate
   - Rocker
+  - DeathCurtain
+  - GameCanvas
+  - Rock
   layers:
   - Default
   - TransparentFX
