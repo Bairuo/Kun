@@ -3198,22 +3198,22 @@ Prefab:
     - target: {fileID: 224244880631209050, guid: 77a3076fc9e088f46b2262af5a7cbab6,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 210
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224244880631209050, guid: 77a3076fc9e088f46b2262af5a7cbab6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 210
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 224244880631209050, guid: 77a3076fc9e088f46b2262af5a7cbab6,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 420
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 224244880631209050, guid: 77a3076fc9e088f46b2262af5a7cbab6,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 420
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224244880631209050, guid: 77a3076fc9e088f46b2262af5a7cbab6,
         type: 2}

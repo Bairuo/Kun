@@ -7,6 +7,8 @@ public class Rocker : MonoBehaviour {
     public GameObject viewport;
     public GameObject joy;
     public Vector2 relative;      // 相对锚点的向量
+    public int width = 600;
+    public int height = 600;
     public float x, y;
     public int r;
     float PosX, PosY;
@@ -14,14 +16,14 @@ public class Rocker : MonoBehaviour {
 
     void Start()
     {
-        PosX = GetComponent<RectTransform>().position.x;
-        PosY = GetComponent<RectTransform>().position.y;
+        PosX = viewport.GetComponent<RectTransform>().position.x;
+        PosY = viewport.GetComponent<RectTransform>().position.y;
     }
 
     public void DisPlay()
     {
         display = true;
-        GetComponent<RectTransform>().position = new Vector3(GetRockerTouchPosition().x, GetRockerTouchPosition().y, 0);
+        viewport.GetComponent<RectTransform>().position = new Vector3(GetRockerTouchPosition().x, GetRockerTouchPosition().y, 0);
         Color viewportColor = viewport.GetComponent<Image>().color;
         Color joyColor = joy.GetComponent<Image>().color;
         viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 1);
@@ -31,7 +33,7 @@ public class Rocker : MonoBehaviour {
     public void CancelDisPlay()
     {
         display = false;
-        GetComponent<RectTransform>().position = new Vector3(PosX, PosY, 0);
+        viewport.GetComponent<RectTransform>().position = new Vector3(PosX, PosY, 0);
         Color viewportColor = viewport.GetComponent<Image>().color;
         Color joyColor = joy.GetComponent<Image>().color;
         viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 20.0f / 255);
@@ -48,7 +50,7 @@ public class Rocker : MonoBehaviour {
         {
             foreach (var touch in Input.touches)
             {
-                if (touch.position.x < 1.0f * Screen.width * 0.6f)
+                if (touch.position.x <= width && touch.position.y <= height)
                 {
                     return touch.position;
                 }
