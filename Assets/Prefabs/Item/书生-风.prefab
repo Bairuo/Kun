@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114903087156055046}
   m_Layer: 0
   m_Name: "\u4E66\u751F-\u98CE"
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
-    m_PreInfinity: 2
+    m_PreInfinity: 1
     m_PostInfinity: 1
     m_RotationOrder: 4
   curveY:
@@ -136,7 +136,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.11585364
       outWeight: 0.33333334
-    m_PreInfinity: 2
+    m_PreInfinity: 1
     m_PostInfinity: 1
     m_RotationOrder: 4
   startTime: 0

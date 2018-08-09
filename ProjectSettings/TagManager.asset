@@ -14,6 +14,7 @@ TagManager:
   - DeathCurtain
   - GameCanvas
   - Rock
+  - Wind
   layers:
   - Default
   - TransparentFX
