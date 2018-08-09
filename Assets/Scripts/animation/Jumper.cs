@@ -6,8 +6,8 @@ public class Jumper : MonoBehaviour {
     public float speed = 0.02f;
     public float boundmax = 0.8f;
     public float boundmin = 0.5f;
+    public float shift = 0;
     float origin;
-    float shift = 0;
 
     // Use this for initialization
     void Start()
