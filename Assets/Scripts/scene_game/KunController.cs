@@ -155,10 +155,22 @@ public class KunController : MonoBehaviour {
         {
             moveForwardY = rocker.y > 0 ? (int)MoveStateY.up : (int)MoveStateY.down;
         }
-        
+
         if(moveForwardX != lastMoveForwardX)
         {
-            GetComponent<Animator>().SetInteger("movestate", moveForwardX);
+            float animationTime = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
+            
+            //GetComponent<Animator>().SetInteger("movestate", moveForwardX);
+
+            if (moveForwardX == 1)
+            {
+                GetComponent<Animator>().Play("right", 0, animationTime);
+            }
+            else
+            {
+                GetComponent<Animator>().Play("left", 0, animationTime);
+            }
+
             lastMoveForwardX = moveForwardX;
 
             if(GetComponent<Rigidbody2D>().velocity.magnitude > 2)
