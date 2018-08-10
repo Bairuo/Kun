@@ -955,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioSlider: {fileID: 1031642806}
   AudioEffectSlider: {fileID: 68583416}
-  BGMPrefab: {fileID: 1132681603962968, guid: 7431d65d64e1cc14993950c31022e44f, type: 2}
+  BGMPrefab: {fileID: 1807335099738262, guid: 771dd4a5eaf1dbd4f8b53a7f3fd3b679, type: 2}
   audioEffects:
   - {fileID: 131329815}
   - {fileID: 1908654415}
