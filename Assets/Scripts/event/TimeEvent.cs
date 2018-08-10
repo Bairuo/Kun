@@ -7,21 +7,17 @@ public class TimeEvent : MonoBehaviour {
     public float startTime;
     [SerializeField]
     public UnityEvent onActiveEvent = new UnityEvent();
-    bool hasActived = false;
     float timer = 0;
 
-    void Update()
+    void FixedUpdate()
     {
-        if(!hasActived)
+        timer += Time.deltaTime;
+
+        if (timer >= startTime)
         {
-            timer += Time.deltaTime;
-
-            if (timer >= startTime)
-            {
-                onActiveEvent.Invoke();
-                hasActived = true;
-            }
+            onActiveEvent.Invoke();
+            timer = 0;
+            this.enabled = false;
         }
-
     }
 }

@@ -15,6 +15,7 @@ TagManager:
   - GameCanvas
   - Rock
   - Wind
+  - Ice
   layers:
   - Default
   - TransparentFX
