@@ -212,8 +212,38 @@ public class GeminiController : MonoBehaviour {
             energe.GetComponent<Rigidbody2D>().AddForce(-gravitation * forwardFactor * backflowConstant, ForceMode2D.Impulse);
         }
 
-        int forwardKun = kunController.moveForwardX;
-        int forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? 1 : -1;
+        //int forwardKun = kunController.moveForwardX;
+        //int forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? 1 : -1;
+        int forwardKun = 0;
+        int forwardEnerge = 0;
+
+        switch(forward)
+        {
+            case 0:
+            case 1:
+                forwardKun = kunController.moveForwardY;
+                break;
+            case 2:
+            case 3:
+                forwardKun = kunController.moveForwardX;
+                break;
+        }
+
+        switch(forward)
+        {
+            case 0:
+                forwardEnerge = (kun.transform.position.y - energe.transform.position.y) >= 0 ? 1 : -1;
+                break;
+            case 1:
+                forwardEnerge = (kun.transform.position.y - energe.transform.position.y) >= 0 ? -1 : 1;
+                break;
+            case 2:
+                forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? -1 : 1;
+                break;
+            case 3:
+                forwardEnerge = (kun.transform.position.x - energe.transform.position.x) >= 0 ? 1 : -1;
+                break;
+        }
 
         // 双子推力
         if(lastDistance > min && lastDistance < max)
