@@ -1691,7 +1691,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 40f6853847fb10b4c9d885a4e1d88b1b,
+      objectReference: {fileID: 21300000, guid: 3264c6fd1f73b08408567d5034cbb662,
         type: 3}
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -1707,6 +1707,21 @@ Prefab:
         type: 2}
       propertyPath: target
       value: kun
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -1802,6 +1817,7 @@ MonoBehaviour:
   speed: -0.005
   boundmax: 0.3
   boundmin: 0.3
+  shift: 0
 --- !u!114 &893126329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,7 +2022,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fd84cc703179f114484a11353727afb6,
+      objectReference: {fileID: 21300000, guid: 3264c6fd1f73b08408567d5034cbb662,
         type: 3}
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -2017,6 +2033,21 @@ Prefab:
         type: 2}
       propertyPath: frequency
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -2151,7 +2182,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2a48cefc84b2fa24baa10e05dd5acc88,
+      objectReference: {fileID: 21300000, guid: 3264c6fd1f73b08408567d5034cbb662,
         type: 3}
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -2162,6 +2193,21 @@ Prefab:
         type: 2}
       propertyPath: frequency
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -2708,7 +2754,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 86649d4fb46c9f54c96e26882ba776f8,
+      objectReference: {fileID: 21300000, guid: 0fd7bcdb234c5694caaf4089a0fdbb26,
         type: 3}
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -2719,6 +2765,21 @@ Prefab:
         type: 2}
       propertyPath: frequency
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -3757,7 +3818,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eab4bc5ee7cf57a4588813fee26f84fd,
+      objectReference: {fileID: 21300000, guid: 0fd7bcdb234c5694caaf4089a0fdbb26,
         type: 3}
     - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -3768,6 +3829,21 @@ Prefab:
         type: 2}
       propertyPath: frequency
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
@@ -3953,6 +4029,7 @@ MonoBehaviour:
   speed: 0.005
   boundmax: 0.3
   boundmin: 0.3
+  shift: 0
 --- !u!212 &1534571335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4463,6 +4540,27 @@ Prefab:
       propertyPath: frequency
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0fd7bcdb234c5694caaf4089a0fdbb26,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0

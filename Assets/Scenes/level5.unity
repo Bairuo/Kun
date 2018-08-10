@@ -2708,6 +2708,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  repeat: 1
 --- !u!114 &1175573506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,12 +2823,12 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 86649d4fb46c9f54c96e26882ba776f8,
+      objectReference: {fileID: 21300000, guid: c0e0e94e5b8bbdd42a0fcea5688a063d,
         type: 3}
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -4142,12 +4143,12 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2a48cefc84b2fa24baa10e05dd5acc88,
+      objectReference: {fileID: 21300000, guid: 447564c7f12fc0a4cb065e61ea7f26c3,
         type: 3}
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -4362,7 +4363,7 @@ Prefab:
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
         type: 2}
@@ -4384,6 +4385,12 @@ Prefab:
       propertyPath: frequency
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 212128557345028730, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eb7acc7e467d1ed4097a89cfbe2adc60,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
