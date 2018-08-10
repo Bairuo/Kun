@@ -55,7 +55,7 @@ public class GeminiController : MonoBehaviour {
     void EndTransAnimation()
     {
         particleSys.startColor = new Color(1, 1, 1);
-        particleSys.maxParticles = 100;
+        particleSys.maxParticles = 75;
         particleSys.startSpeed = 10;
         ParticleSystem.ShapeModule newShape = particleSys.shape;
         newShape.shapeType = ParticleSystemShapeType.Cone;

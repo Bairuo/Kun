@@ -43,6 +43,7 @@ public class LevelManager : MonoBehaviour {
         }
 
         maxlevel = PlayerPrefs.GetInt("maxlevel", 0);
+        //maxlevel = 6;
     }
  
 
