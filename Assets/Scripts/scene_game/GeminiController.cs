@@ -44,12 +44,29 @@ public class GeminiController : MonoBehaviour {
     void StartTransAnimation()
     {
         transAnimationTimer = 0;
+        particleSys.startColor = new Color(0, 1, 0.812f);
+        particleSys.maxParticles = 300;
+        particleSys.startSpeed = 1.5f;
+        ParticleSystem.ShapeModule newShape = particleSys.shape;
+        newShape.shapeType = ParticleSystemShapeType.Donut;
+        newShape.radius = 0.4f;
+    }
+    
+    void EndTransAnimation()
+    {
+        particleSys.startColor = new Color(1, 1, 1);
+        particleSys.maxParticles = 100;
+        particleSys.startSpeed = 10;
+        ParticleSystem.ShapeModule newShape = particleSys.shape;
+        newShape.shapeType = ParticleSystemShapeType.Cone;
+        newShape.radius = 0.5f;
     }
 
     void particleTrans()
     {
         if(transAnimationTimer > transAnimationTime)
         {
+            EndTransAnimation();
             return;
         }
 
@@ -295,6 +312,10 @@ public class GeminiController : MonoBehaviour {
 
                 particleTrans();
             }
+        }
+        else
+        {
+            EndTransAnimation();
         }
 
         

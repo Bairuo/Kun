@@ -5933,7 +5933,7 @@ MonoBehaviour:
   max: 6
   maxVelocity: 7
   transAnimationTime: 1.5
-  transVelocity: 0.1
+  transVelocity: 0.05
 --- !u!114 &1891493940
 MonoBehaviour:
   m_ObjectHideFlags: 0

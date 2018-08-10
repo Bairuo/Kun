@@ -4473,16 +4473,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114480433059730966, guid: b762c563f60e3544dbd3de7517468f36,
-        type: 2}
-      propertyPath: kun
-      value: 
-      objectReference: {fileID: 1896525935}
     - target: {fileID: 114195416757578006, guid: b762c563f60e3544dbd3de7517468f36,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 1977138804}
+    - target: {fileID: 114480433059730966, guid: b762c563f60e3544dbd3de7517468f36,
+        type: 2}
+      propertyPath: kun
+      value: 
+      objectReference: {fileID: 1896525935}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
   m_IsPrefabParent: 0
@@ -4747,7 +4747,7 @@ MonoBehaviour:
   max: 6
   maxVelocity: 7
   transAnimationTime: 1.5
-  transVelocity: 0.1
+  transVelocity: 0.05
 --- !u!114 &1891493940
 MonoBehaviour:
   m_ObjectHideFlags: 0
