@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114021883078129142}
   - component: {fileID: 114178605871281232}
   m_Layer: 0
-  m_Name: MemoryParticle_Level1
+  m_Name: MemoryParticle_Level6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4646,7 +4646,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f74680a111488df4480a18caac7e1473, type: 2}
+  - {fileID: 2100000, guid: 9a4f9cd8ff746f643b2f8ece56b2a20c, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
