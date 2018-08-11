@@ -15,20 +15,25 @@ public class EnergyBarController : MonoBehaviour {
     public int geminivalue;  //伴随物能量
     float targetvalue;
     public float targetdividerposition;
+
+    int maxEnergy;
+
     // Use this for initialization
     void Start() {
         kc = kun.GetComponent<KunController>();
         ec = energy.GetComponent<EnergeController>();
         slider = GetComponent<Slider>();
         slider.value = 1;
+
+        maxEnergy = kc.energy + ec.energy;
     }
 
     // Update is called once per frame
     void Update() {
-        kunvalue = kc.energe;
-        geminivalue = ec.energe;
+        kunvalue = kc.energy;
+        geminivalue = ec.energy;
         totalvalue = kunvalue + geminivalue;
-        targetvalue = (float)totalvalue / 200;
+        targetvalue = (float)totalvalue / maxEnergy;
         if (slider.value != targetvalue)
         {
             if (slider.value < targetvalue)

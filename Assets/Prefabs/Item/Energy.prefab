@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 114148017389272196}
   - component: {fileID: 114195416757578006}
   m_Layer: 0
-  m_Name: Energe
+  m_Name: Energy
   m_TagString: Energe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -356,7 +356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1619966519548454, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
       propertyPath: m_Name
-      value: Energe
+      value: Energy
       objectReference: {fileID: 0}
     - target: {fileID: 114480433059730966, guid: b762c563f60e3544dbd3de7517468f36,
         type: 2}
@@ -2485,6 +2485,11 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730821350501500, guid: c9327c4dafc4fe045912c8e7b4daaa39,
+        type: 2}
+      propertyPath: energe
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 331038704807826504, guid: c9327c4dafc4fe045912c8e7b4daaa39, type: 2}

@@ -303,7 +303,7 @@ public class GeminiController : MonoBehaviour {
         // 吸收能量
         if(distance < AbsorptionRadius)
         {
-            if (kun.GetComponent<KunController>().energe > 0)
+            if (kun.GetComponent<KunController>().energy > 0)
             {
                 if(kun.GetComponent<KunController>().Absorb(energe))
                 {

@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class EnergeController : MonoBehaviour {
     public GameObject kun;
     public float SeparationDistance;
-    public int energe = 100;
-    public int minEnerge = 35;
+    public int energy = 100;
+    public int minEnergy = 35;
     public float accelerateWaitTime = 2;
     enum MoveState { left = -1, right = 1 };
     int moveState = 1;
     int lastMoveState = 1;
-    int maxEnerge;
-    int lastEnerge;
+    int maxEnergy;
+    int lastEnergy;
     float accelerateTimer = 0;
 
 	// Use this for initialization
 	void Start () {
-        lastEnerge = energe;
-        maxEnerge = energe;
+        lastEnergy = energy;
+        maxEnergy = energy;
 	}
 
 
@@ -33,15 +33,15 @@ public class EnergeController : MonoBehaviour {
 
 
         // 透明度
-        if(lastEnerge != energe)
+        if(lastEnergy != energy)
         {
-            lastEnerge = energe;
+            lastEnergy = energy;
             Color color = GetComponent<SpriteRenderer>().color;
 
             SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
             foreach(SpriteRenderer sprite in sprites)
             {
-                sprite.color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
+                sprite.color = new Color(color.r, color.g, color.b, 1.0f * energy / maxEnergy);
             }
         }
 
@@ -84,35 +84,35 @@ public class EnergeController : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Memory" && energe < maxEnerge && (kun.transform.position - this.transform.position).magnitude > SeparationDistance)
+        if (other.tag == "Memory" && energy < maxEnergy && (kun.transform.position - this.transform.position).magnitude > SeparationDistance)
         {
-            energe += other.GetComponent<MemoryController>().Exploit();
+            energy += other.GetComponent<MemoryController>().Exploit();
         }
     }
 
     public bool IsWeek()
     {
-        return energe <= minEnerge;
+        return energy <= minEnergy;
     }
 
     public int getEnerge(int demand)
     {
-        if(energe - minEnerge > demand)
+        if(energy - minEnergy > demand)
         {
-            energe -= demand;
+            energy -= demand;
             return demand;
         }
         else
         {
-            int getvalue = energe - minEnerge;
-            energe = minEnerge;
+            int getvalue = energy - minEnergy;
+            energy = minEnergy;
             return getvalue;
         }
     }
 
     public bool canAccelerate()
     {
-        if(energe >= minEnerge && accelerateTimer <= 0)
+        if(energy >= minEnergy && accelerateTimer <= 0)
         {
             accelerateTimer = accelerateWaitTime;
             return true;

@@ -1791,7 +1791,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1619966519548454, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
       propertyPath: m_Name
-      value: Energe
+      value: Energy
       objectReference: {fileID: 0}
     - target: {fileID: 114480433059730966, guid: b762c563f60e3544dbd3de7517468f36,
         type: 2}

@@ -8,8 +8,8 @@ public class KunController : MonoBehaviour {
     [Range(0, 3)]
     public int forward = 3;     // 关卡的前进方向
     public float operability;   // 玩家摇杆对鲲的控制力度
-    public int energe = 100;
-    public int weekEnerge = 40;         // 虚弱能量线
+    public int energy = 100;
+    public int weekEnergy = 40;         // 虚弱能量线
     public float absorbTime = 0.5f;     // 吸收时间
     public int absorbSpeed = 5;         // 每次吸收数量
     public float consumeTime = 0.5f;    // 消耗能量时间
@@ -41,8 +41,8 @@ public class KunController : MonoBehaviour {
         moveForwardY = (int)MoveStateY.up;
         lastMoveForwardY = moveForwardY;
 
-        lastEnerge = energe;
-        maxEnerge = energe;
+        lastEnerge = energy;
+        maxEnerge = energy;
 
         originOperability = operability;
 
@@ -61,7 +61,7 @@ public class KunController : MonoBehaviour {
 
     public bool EnergySaturation()
     {
-        return energe >= maxEnerge;
+        return energy >= maxEnerge;
     }
 	
     public bool Absorb(GameObject energeBall)
@@ -72,7 +72,7 @@ public class KunController : MonoBehaviour {
             absorbWait = false;
             absorbTimer = 0;
             int getEnerge = energeController.getEnerge(absorbSpeed);
-            energe += getEnerge;
+            energy += getEnerge;
 
             if(getEnerge > 0)
             {
@@ -97,7 +97,7 @@ public class KunController : MonoBehaviour {
 	// Update is called once per frame
     void FixedUpdate()
     {
-        if(energe <= 0)
+        if(energy <= 0)
         {
             return;
         }
@@ -116,11 +116,11 @@ public class KunController : MonoBehaviour {
         if(consumeTimer > consumeTime && !invincible)
         {
             consumeTimer = 0;
-            if(energe > 0)
+            if(energy > 0)
             {
-                energe -= consumeSpeed;
+                energy -= consumeSpeed;
 
-                if(energe <= 0)
+                if(energy <= 0)
                 {
                     GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                     GameOver();
@@ -128,17 +128,17 @@ public class KunController : MonoBehaviour {
             }
         }
 
-        if (lastEnerge != energe)
+        if (lastEnerge != energy)
         {
-            lastEnerge = energe;
+            lastEnerge = energy;
             Color color = GetComponent<SpriteRenderer>().color;
-            GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
+            GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energy / maxEnerge);
         }
 
         // 虚弱
-        if (energe < weekEnerge)
+        if (energy < weekEnergy)
         {
-            operability = 1.0f * energe / weekEnerge * originOperability;
+            operability = 1.0f * energy / weekEnergy * originOperability;
         }
         else
         {

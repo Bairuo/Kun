@@ -4281,6 +4281,10 @@ Prefab:
       propertyPath: kun
       value: 
       objectReference: {fileID: 1896525935}
+    - target: {fileID: 1619966519548454, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
+      propertyPath: m_Name
+      value: Energy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b762c563f60e3544dbd3de7517468f36, type: 2}
   m_IsPrefabParent: 0
