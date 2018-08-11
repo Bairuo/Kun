@@ -25,13 +25,13 @@ public class EnergyBarController : MonoBehaviour {
         slider = GetComponent<Slider>();
         slider.value = 1;
 
-        maxEnergy = kc.energy + ec.energy;
+        maxEnergy = kc.energy + ec.energy - ec.minEnergy;
     }
 
     // Update is called once per frame
     void Update() {
         kunvalue = kc.energy;
-        geminivalue = ec.energy;
+        geminivalue = ec.energy - ec.minEnergy;
         totalvalue = kunvalue + geminivalue;
         targetvalue = (float)totalvalue / maxEnergy;
         if (slider.value != targetvalue)
