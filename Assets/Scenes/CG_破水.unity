@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b42c8c32976244cb676fccb67c1496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Darkening: {fileID: 0}
+  Darkening: {fileID: 1823864076}
   startTime: 9
 --- !u!1 &1504578043
 GameObject:
@@ -871,6 +871,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1823864076 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1839959305593752, guid: 1a6b890bb70851c468a09bfb65665bf4,
+    type: 2}
+  m_PrefabInternal: {fileID: 2109925365}
 --- !u!1001 &2109925365
 Prefab:
   m_ObjectHideFlags: 0
