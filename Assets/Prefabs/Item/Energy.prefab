@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114195416757578006}
   m_Layer: 0
   m_Name: Energy
-  m_TagString: Energe
+  m_TagString: Energy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,8 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kun: {fileID: 0}
   SeparationDistance: 5
-  energe: 100
-  minEnerge: 10
+  energy: 100
+  minEnergy: 35
   accelerateWaitTime: 2
 --- !u!114 &114536304922180688
 MonoBehaviour:

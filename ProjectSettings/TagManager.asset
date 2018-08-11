@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Kun
-  - Energe
   - Memory
   - Leaf
   - BGM
@@ -16,6 +15,7 @@ TagManager:
   - Rock
   - Wind
   - Ice
+  - Energy
   layers:
   - Default
   - TransparentFX
