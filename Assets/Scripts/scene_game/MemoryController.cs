@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MemoryController : MonoBehaviour {
-    public int energe;
+    public int energy;
     public float frequency = 0.5f;     // 开采频率
     public int speed;       // 每秒开采
     public bool regenerate = false;     // 是否重生
     public int generateSpeed;           // 重生速度
     float timer = 0;
-    float maxEnerge;
-    float lastEnerge;
+    float maxEnergy;
+    float lastEnergy;
     bool prepare = true;
 
     void Start()
     {
-        lastEnerge = energe;
-        maxEnerge = energe;
+        lastEnergy = energy;
+        maxEnergy = energy;
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class MemoryController : MonoBehaviour {
         // 计时是否可产出
         timer += Time.deltaTime;
 
-        if(energe == 0 && !regenerate)
+        if(energy == 0 && !regenerate)
         {
             Destroy(this.gameObject);
         }
@@ -35,37 +35,48 @@ public class MemoryController : MonoBehaviour {
             prepare = true;
 
             // 再生
-            if (regenerate && energe < maxEnerge)
+            if (regenerate && energy < maxEnergy)
             {
-                energe += generateSpeed;
+                energy += generateSpeed;
             }
         }
 
         // 更新透明度
-        if (lastEnerge != energe)
+        if (lastEnergy != energy)
         {
-            lastEnerge = energe;
+            lastEnergy = energy;
             Color color = GetComponent<SpriteRenderer>().color;
-            GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energe / maxEnerge);
+            GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f * energy / maxEnergy);
         }
 
     }
 
-    public int Exploit()
+    public int Exploit(Transform Miner)
     {
         if(prepare)
         {
             prepare = false;
 
-            if(energe >= speed)
+            if(energy > 0)
             {
-                energe -= speed;
+                MemoryParticleTrans TransferDevice = GetComponentInChildren<MemoryParticleTrans>();
+
+                if(TransferDevice != null)
+                {
+                    TransferDevice.target = Miner;
+                    TransferDevice.StartTransAnimation();
+                }
+            }
+
+            if(energy >= speed)
+            {
+                energy -= speed;
                 return speed;
             }
             else
             {
-                int real = energe;
-                energe = 0;
+                int real = energy;
+                energy = 0;
                 return real;
             }
 

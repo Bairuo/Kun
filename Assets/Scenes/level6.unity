@@ -456,6 +456,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -616,6 +621,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 6d48ac377aaa7c142ba1fcb89586ad3c,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -1445,6 +1455,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -1880,6 +1895,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 63d69d2240f03184fbc3f838b0ed715d,
         type: 3}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -2970,6 +2990,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -3489,6 +3514,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}
   m_IsPrefabParent: 0
@@ -3848,6 +3878,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355964331464338, guid: 600fd1248927b82438a1ceb901585ca8,
+        type: 2}
+      propertyPath: energy
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600fd1248927b82438a1ceb901585ca8, type: 2}

@@ -86,7 +86,7 @@ public class EnergeController : MonoBehaviour {
     {
         if (other.tag == "Memory" && energy < maxEnergy && (kun.transform.position - this.transform.position).magnitude > SeparationDistance)
         {
-            energy += other.GetComponent<MemoryController>().Exploit();
+            energy += other.GetComponent<MemoryController>().Exploit(this.transform);
         }
     }
 
