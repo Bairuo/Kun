@@ -1100,7 +1100,7 @@ Prefab:
     - target: {fileID: 224973168027769136, guid: 21b1f696654d38d4d93a58fd892cef6b,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224973168027769136, guid: 21b1f696654d38d4d93a58fd892cef6b,
         type: 2}
@@ -2054,7 +2054,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: levelChoose
+            m_StringArgument: "CG_\u5F00\u59CB"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 800730545}

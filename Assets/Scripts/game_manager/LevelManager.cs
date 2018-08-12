@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-    public static string[] LevelNames = {"level1", "level2", "level3", "level4", "level5", "CG_56", "level6", "CG_破水", "CG_化鹏"};
+    public static string[] LevelNames = {"level1", "level2", "level3", "level4", "level5", "CG_56", "level6", "CG_通关"};
     public static int maxlevel
     {
         get

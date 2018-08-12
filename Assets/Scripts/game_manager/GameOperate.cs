@@ -16,7 +16,7 @@ public class GameOperate : MonoBehaviour {
 	public void Return()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("开始游戏");
+        SceneManager.LoadScene("levelChoose");
     }
 
     public void PauseTime()
