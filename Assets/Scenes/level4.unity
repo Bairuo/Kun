@@ -2486,6 +2486,11 @@ Prefab:
       propertyPath: onActiveEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114712606309544472, guid: d23cb3907e2db33488f0f6ea16ed4848,
+        type: 2}
+      propertyPath: startTime
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d23cb3907e2db33488f0f6ea16ed4848, type: 2}
   m_IsPrefabParent: 0
