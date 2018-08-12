@@ -35,7 +35,19 @@ public class GameOperate : MonoBehaviour {
     {
         if(!ObjectPause)
         {
-            PauseOrContinueObj();
+            for (int i = pausers.Count - 1; i >= 0; i--)
+            {
+                if (pausers[i] != null)
+                {
+                    pausers[i].Pause();
+                }
+                else
+                {
+                    pausers.Remove(pausers[i]);
+                }
+            }
+
+            ObjectPause = true;
         }
     }
 
@@ -43,26 +55,22 @@ public class GameOperate : MonoBehaviour {
     {
         if(ObjectPause)
         {
-            PauseOrContinueObj();
+            for (int i = pausers.Count - 1; i >= 0; i--)
+            {
+                if (pausers[i] != null)
+                {
+                    pausers[i].Continue();
+                }
+                else
+                {
+                    pausers.Remove(pausers[i]);
+                }
+            }
+
+            ObjectPause = false;
         }
     }
 
-    void PauseOrContinueObj()
-    {
-        for (int i = pausers.Count - 1; i >= 0; i--)
-        {
-            if(pausers[i] != null)
-            {
-                pausers[i].Pause();
-            }
-            else
-            {
-                pausers.Remove(pausers[i]);
-            }
-        }
-
-        ObjectPause = !ObjectPause;
-    }
 
     public void ReStart()
     {

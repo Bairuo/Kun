@@ -1512,7 +1512,7 @@ Prefab:
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
       propertyPath: id
-      value: level2Time
+      value: StoryL2N1
       objectReference: {fileID: 0}
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
@@ -1579,7 +1579,7 @@ Prefab:
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
       propertyPath: developClear
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
@@ -5265,7 +5265,7 @@ Prefab:
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
       propertyPath: id
-      value: level2Rock
+      value: StoryL2N2
       objectReference: {fileID: 0}
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
@@ -5332,7 +5332,7 @@ Prefab:
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}
       propertyPath: developClear
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114716674717625482, guid: 7aef9d8953734d04e91ba77bcbae545d,
         type: 2}

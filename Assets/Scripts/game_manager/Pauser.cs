@@ -15,28 +15,49 @@ public class Pauser : MonoBehaviour {
 	
     public void Pause()
     {
+        if(pause)
+        {
+            return;
+        }
+
         foreach(Behaviour behaviour in behaviours)
         {
             if(behaviour != null)
             {
-                behaviour.enabled = pause;
+                behaviour.enabled = false;
             }
         }
 
         if(sleepRigidBody)
         {
-            if(pause == false)
+            velocity = GetComponent<Rigidbody2D>().velocity;
+            GetComponent<Rigidbody2D>().Sleep();
+        }
+
+        pause = true;
+    }
+
+    public void Continue()
+    {
+        if(!pause)
+        {
+            return;
+        }
+
+        foreach (Behaviour behaviour in behaviours)
+        {
+            if (behaviour != null)
             {
-                velocity = GetComponent<Rigidbody2D>().velocity;
-                GetComponent<Rigidbody2D>().Sleep();
-            }
-            else
-            {
-                GetComponent<Rigidbody2D>().WakeUp();
-                GetComponent<Rigidbody2D>().velocity = velocity;
+                behaviour.enabled = true;
             }
         }
 
-        pause = !pause;
+        if (sleepRigidBody)
+        {
+            GetComponent<Rigidbody2D>().WakeUp();
+            GetComponent<Rigidbody2D>().velocity = velocity;
+        }
+
+        pause = false;
     }
 }

@@ -26,7 +26,14 @@ public class StoryPlotController : MonoBehaviour {
     {
         if(index == 0)
         {
-            Switch();
+            if (!repeat && PlayerPrefs.GetInt(id, 0) == 0)
+            {
+                Switch();
+            }
+            else
+            {
+                this.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -34,9 +41,11 @@ public class StoryPlotController : MonoBehaviour {
     {
         if(index == 0)
         {
+            Debug.Log(0);
             GameObject.FindGameObjectWithTag("Rocker").GetComponent<Rocker>().ForceReset();
             GameObject.FindGameObjectWithTag("Rocker").SetActive(false);
             GameObject.FindGameObjectWithTag("GameOperate").GetComponent<GameOperate>().PauseObjects();
+            Debug.Log(1);
 
             foreach(var obj in cancelDisplay)
             {
