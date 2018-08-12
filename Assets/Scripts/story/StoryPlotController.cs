@@ -7,21 +7,14 @@ using UnityEngine.Events;
 public class StoryPlotController : MonoBehaviour {
     public string id;
     public bool repeat = false;
-    [SerializeField]
-    public UnityEvent startEvent = new UnityEvent();
     public GameObject[] cancelDisplay;
-    [SerializeField]
-    public UnityEvent endEvent = new UnityEvent();
     public Sprite[] sprites;
     public AudioClip[] audioclips;
     public bool developClear = false;
-    Color color;
     int index = 0;
 
 	// Use this for initialization
 	void Start () {
-        color = GetComponent<Image>().color;
-        GetComponent<Image>().color = new Color(color.r, color.g, color.b, 0);
 
         if(developClear)
         {
@@ -29,15 +22,22 @@ public class StoryPlotController : MonoBehaviour {
         }
 	}
 
+    void Update()
+    {
+        if(index == 0)
+        {
+            Switch();
+        }
+    }
+
     void Switch()
     {
         if(index == 0)
         {
+            GameObject.FindGameObjectWithTag("Rocker").GetComponent<Rocker>().ForceReset();
+            GameObject.FindGameObjectWithTag("Rocker").SetActive(false);
             GameObject.FindGameObjectWithTag("GameOperate").GetComponent<GameOperate>().PauseObjects();
-            GetComponent<Image>().color = new Color(color.r, color.g, color.b, color.a);
-            GetComponent<Button>().interactable = true;
 
-            startEvent.Invoke();
             foreach(var obj in cancelDisplay)
             {
                 obj.SetActive(false);
@@ -60,7 +60,6 @@ public class StoryPlotController : MonoBehaviour {
         else
         {
             GetComponent<AudioSource>().Stop();
-            GetComponent<Image>().color = new Color(color.r, color.g, color.b, 0);
             PlayerPrefs.SetInt(id, 1);
             GameObject.FindGameObjectWithTag("GameOperate").GetComponent<GameOperate>().ContinueObjects();
 
@@ -68,7 +67,8 @@ public class StoryPlotController : MonoBehaviour {
             {
                 obj.SetActive(true);
             }
-            endEvent.Invoke();
+
+            this.gameObject.SetActive(false);
         }
     }
 
