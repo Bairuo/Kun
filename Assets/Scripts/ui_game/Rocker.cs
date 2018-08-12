@@ -20,6 +20,19 @@ public class Rocker : MonoBehaviour {
         PosY = viewport.GetComponent<RectTransform>().position.y;
     }
 
+    public void ForceReset()
+    {
+        display = false;
+
+        viewport.GetComponent<RectTransform>().position = new Vector3(PosX, PosY, 0);
+        joy.GetComponent<RectTransform>().position = new Vector3(PosX, PosY, 0);
+
+        Color viewportColor = viewport.GetComponent<Image>().color;
+        Color joyColor = joy.GetComponent<Image>().color;
+        viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 20.0f / 255);
+        joy.GetComponent<Image>().color = new Color(joyColor.r, joyColor.g, joyColor.b, 20.0f / 255);
+    }
+
     public void DisPlay()
     {
         display = true;
@@ -33,7 +46,9 @@ public class Rocker : MonoBehaviour {
     public void CancelDisPlay()
     {
         display = false;
+
         viewport.GetComponent<RectTransform>().position = new Vector3(PosX, PosY, 0);
+
         Color viewportColor = viewport.GetComponent<Image>().color;
         Color joyColor = joy.GetComponent<Image>().color;
         viewport.GetComponent<Image>().color = new Color(viewportColor.r, viewportColor.g, viewportColor.b, 20.0f / 255);

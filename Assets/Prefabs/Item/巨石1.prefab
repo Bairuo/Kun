@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114614179557951040}
   - component: {fileID: 114782143633463620}
   - component: {fileID: 114189381576197686}
+  - component: {fileID: 114975559318268644}
   m_Layer: 0
   m_Name: "\u5DE8\u77F31"
   m_TagString: Rock
@@ -242,6 +243,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114975559318268644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1144315257028388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429eaf83c42f4ab4d9f6d568fabc01ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours: []
+  sleepRigidBody: 1
 --- !u!212 &212223549250592114
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114441039131032448}
   - component: {fileID: 114274750703827900}
   - component: {fileID: 114708621986687320}
+  - component: {fileID: 114720013109627742}
   m_Layer: 0
   m_Name: "\u5DE8\u77F32"
   m_TagString: Rock
@@ -312,6 +313,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: Kun
   ShakeInterval: 3
+--- !u!114 &114720013109627742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1773594247309130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429eaf83c42f4ab4d9f6d568fabc01ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviours: []
+  sleepRigidBody: 1
 --- !u!212 &212362346148093594
 SpriteRenderer:
   m_ObjectHideFlags: 1
