@@ -49,9 +49,11 @@ public class LevelManager : MonoBehaviour {
 
     public void FirstGame()
     {
-        if(!PlayerPrefs.HasKey("FirstGame"))
+        int time = PlayerPrefs.GetInt("FirstGame", 0);
+
+        if(time < 2)
         {
-            PlayerPrefs.SetInt("FirstGame", 1);
+            PlayerPrefs.SetInt("FirstGame", time + 1);
             SceneManager.LoadScene("新手引导");
         }
         else
