@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour {
         if(!PlayerPrefs.HasKey("FirstGame"))
         {
             PlayerPrefs.SetInt("FirstGame", 1);
-            SceneManager.LoadScene("CG_开始");
+            SceneManager.LoadScene("新手引导");
         }
         else
         {

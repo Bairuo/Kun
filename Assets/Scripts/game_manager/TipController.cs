@@ -1,40 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class TipController : MonoBehaviour {
-    public GameObject curtain;
-    public GameObject[] tips;
-    public string tipName = "help";
-    int p;
-
-    void Start()
-    {
-        if(PlayerPrefs.GetInt(tipName, 0) == 0)
-        {
-            PlayerPrefs.SetInt(tipName, 0);
-            DisplayTip();
-        }
-    }
-
-    public void DisplayTip()
-    {
-        p = 0;
-        curtain.SetActive(true);
-        tips[0].SetActive(true);
-    }
+    public Sprite[] tips;
+    [SerializeField]
+    public UnityEvent endEvent = new UnityEvent();
+    int p = 0;
 
     public void Continue()
     {
-        if(p == tips.Length - 1)
+        if(p > tips.Length - 1)
         {
-            tips[p].SetActive(false);
-            curtain.SetActive(false);
             return;
         }
-
-        p++;
-        tips[p - 1].SetActive(false);
-        tips[p].SetActive(true);
+        else if(p == tips.Length - 1)
+        {
+            p++;
+            endEvent.Invoke();
+            return;
+        }
+        else
+        {
+            p++;
+            GetComponent<Image>().sprite = tips[p];
+        }
     }
 }
