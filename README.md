@@ -10,16 +10,16 @@
 
 提取码 i6p6
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game1.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game1.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game2.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game2.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game3.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game3.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game4.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game4.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game5.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game5.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game6.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game6.png)
 
-![Game screenshot](https://github.com/Bairuo/Kun/raw/gh-pages/meta/game7.png)
+![Game screenshot](https://github.com/Bairuo/Kun/raw/master/meta/game7.png)
